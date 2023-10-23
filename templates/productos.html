@@ -9,7 +9,8 @@
         
         <img src="{{ producto.foto }}" alt="{{ producto.name }}">
         <h2>{{ producto.name }}</h2>
-        <p>{{ producto.descripcion }}</p>
+        <p>{{ producto.descripcion }}
+        </br><b>Precio: $ {{ producto.price }}</b></p>
         <a href="/category/{{ producto.categoria }}">Volver a {{ producto.categoria }}</a>
     </div>
 </body>
