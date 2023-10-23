@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h1>Producto</h1>
+    <div>
+        
+        <img src="{{ producto.foto }}" alt="{{ producto.name }}">
+        <h2>{{ producto.name }}</h2>
+        <p>{{ producto.descripcion }}</p>
+        <a href="/category/{{ producto.categoria }}">Volver a {{ producto.categoria }}</a>
+    </div>
+</body>
+</html>

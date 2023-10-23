@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h1>Categoría: {{ categoria }}</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <h3><a href="/productos/{{ producto.id }}">{{ producto.name }}</a></h3>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
