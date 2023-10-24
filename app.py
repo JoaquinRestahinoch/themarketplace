@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from productos import productos
-app = Flask(__name__, template_folder='templates')  
+from usuarios import usuarios_db, verificar_credenciales, crear_usuario
+
+app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def Index():
@@ -20,7 +22,6 @@ def categorias():
 
 @app.route('/category/<categoria>')
 def category(categoria):
-
     productos_categoria = [producto for producto in productos if producto['categoria'] == categoria]
     return render_template('category.html', categoria=categoria, productos=productos_categoria)
 
@@ -34,9 +35,7 @@ def terycond():
 
 @app.route('/productos/<int:producto_id>')
 def mostrar_producto(producto_id):
-
     producto = next((p for p in productos if p['id'] == producto_id), None)
-
     if producto:
         return render_template('productos.html', producto=producto)
     else:
@@ -57,16 +56,34 @@ def defconsum():
 @app.route('/redireccionarr', methods=['POST'])
 def redireccionarr():
     return redirect('/finalizacompra.html')
-    
 
-@app.route('/vaciarcarrito', methods=['DELETE'])
-def vaciar_carrito():
-    # Lógica para vaciar el carrito
-    carrito.clear()
-    # También puedes limpiar el carrito en el almacenamiento local
-    limpiarCarrito()
-    return redirect('/home.html')
+@app.route('/login.html')
+def cargar_login():
+    return render_template('login.html')
 
+@app.route('/verificar_login', methods=['POST'])
+def verificar_login():
+    username = request.form['username']
+    password = request.form['password']
+
+    if verificar_credenciales(username, password):
+        return redirect('/home.html')
+    else:
+        return "Credenciales incorrectas. Inténtalo de nuevo."
+
+@app.route('/registro.html')
+def cargar_registro():
+    return render_template('registro.html')
+
+@app.route('/crear_cuenta', methods=['POST'])
+def crear_cuenta():
+    username = request.form['username']
+    password = request.form['password']
+
+    if crear_usuario(username, password):
+        return redirect('/login.html')
+    else:
+        return "El nombre de usuario ya está en uso. Inténtalo de nuevo."
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)

@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
-        /* Estilo para el pop-up */
         .popup {
             display: none;
             position: fixed;
@@ -24,7 +22,6 @@
             text-align: center;
         }
 
-        /* Estilo para el botón del carrito */
         .carrito-button {
             position: absolute;
             top: 20px;
@@ -37,7 +34,6 @@
             cursor: pointer;
         }
 
-        /* Estilo para la lista de productos en el carrito */
         #carrito-list {
             list-style: none;
             padding: 0;
@@ -54,7 +50,6 @@
             margin-right: 10px;
         }
 
-        /* Estilo para los botones de carrito */
         .carrito-buttons {
             margin-top: 20px;
         }
@@ -74,13 +69,10 @@
         <p><b>Cantidad disponible: {{ producto.quantity }}</b></p>
         <a href="/category/{{ producto.categoria }}">Volver a {{ producto.categoria }}</a>
         <br>
-        <!-- Botón para agregar al Carrito -->
         <button id="agregarCarrito">Agregar al Carrito</button>
-        <!-- Botón para ofertar -->
         <button id="ofertar">Ofertar</button>
     </div>
 
-    <!-- Pop-up para ofertas -->
     <div id="ofertaPopup" class="popup">
         <div class="popup-content">
             <h2>Realizar una oferta</h2>
@@ -92,67 +84,71 @@
         </div>
     </div>
 
-    <!-- Botón del carrito -->
     <button class="carrito-button" id="verCarrito">Carrito</button>
 
-    <!-- Pop-up para mostrar el contenido del carrito -->
     <div id="carritoPopup" class="popup">
         <div class="popup-content">
             <h2>Carrito de Compras</h2>
             <ul id="carrito-list">
-                <!-- Los productos en el carrito se mostrarán aquí -->
             </ul>
             <div class="carrito-buttons">
                 <button class="carrito-button-item" id="seguirComprando">Seguir Comprando</button>
-                <form action="/finalizarcompra" method="POST">
+                <form action="/redireccionarr" method="POST">
                     <button type="submit" class="seleccionar-button">Finalizar Compra</button>
                 </form>
-                <button class="carrito-button-item" id="vaciarCarrito">Vaciar Carrito</button>
             </div>
-            
         </div>
     </div>
 
     <script>
-        
-        // Inicializar el carrito como un arreglo vacío
-        const carrito = [];
-    
-        // Función para limpiar el carrito
         function limpiarCarrito() {
             localStorage.removeItem("carrito");
         }
-    
-        // Función para obtener el carrito desde el almacenamiento local
+
         function obtenerCarrito() {
             return JSON.parse(localStorage.getItem("carrito")) || [];
         }
-    
-        // Limpiar el carrito al inicio (comentado para mantener el carrito durante la sesión)
-        // limpiarCarrito();
-    
-        // Función para actualizar la lista de productos en el pop-up del carrito
-        function actualizarListaCarrito() {
-            const carritoList = document.getElementById("carrito-list");
-            carritoList.innerHTML = ""; // Limpia la lista antes de mostrar el contenido actual
-    
-            carrito.forEach(item => {
-                const li = document.createElement("li");
-                li.innerHTML = `
-                    <img src="${item.foto}" alt="${item.producto}">
-                    <div>
-                        <strong>${item.producto}</strong><br>
-                        Cantidad: ${item.cantidad}<br>
-                        Precio Unitario: $${item.precioUnitario}<br>
-                        Precio Total: $${item.precioUnitario * item.cantidad}
-                    `;
-                carritoList.appendChild(li);
-            });
-        }
-    
-        // Mostrar el pop-up al hacer clic en "Agregar al Carrito"
+
+
+        const carrito = obtenerCarrito();
+
+function actualizarListaCarrito() {
+    const carritoList = document.getElementById("carrito-list");
+    carritoList.innerHTML = ""; 
+    carrito.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <img src="${item.foto}" alt="${item.producto}">
+            <div>
+                <strong>${item.producto}</strong><br>
+                Cantidad: ${item.cantidad}<br>
+                Precio Unitario: $${item.precioUnitario}<br>
+                Precio Total: $${item.precioUnitario * item.cantidad}
+            </div>
+            <button class="eliminar-producto" data-index="${index}">Eliminar</button>
+        `;
+        carritoList.appendChild(li);
+    });
+
+    const eliminarProductoButtons = document.querySelectorAll('.eliminar-producto');
+    eliminarProductoButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const index = event.target.getAttribute('data-index');
+            eliminarProducto(index);
+        });
+    });
+}
+
+function eliminarProducto(index) {
+    carrito.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarListaCarrito();
+}
+
+
+
         const agregarCarritoButton = document.getElementById("agregarCarrito");
-    
+
         agregarCarritoButton.addEventListener("click", () => {
             const cantidad = parseFloat(prompt("Ingrese la cantidad (menor o igual a la disponible):"));
             if (cantidad <= {{ producto.quantity }}) {
@@ -168,22 +164,19 @@
                 alert("La cantidad ingresada es mayor a la disponible.");
             }
         });
-    
-        // Mostrar el pop-up al hacer clic en "Ofertar"
+
         const ofertarButton = document.getElementById("ofertar");
         const ofertaPopup = document.getElementById("ofertaPopup");
         const confirmarOfertaButton = document.getElementById("confirmarOferta");
-    
+
         ofertarButton.addEventListener("click", () => {
             ofertaPopup.style.display = "block";
         });
-    
-        // Cerrar el pop-up al hacer clic en "Confirmar Oferta"
+
         confirmarOfertaButton.addEventListener("click", () => {
             const montoOferta = parseFloat(document.getElementById("montoOferta").value);
             const cantidadOferta = parseFloat(document.getElementById("cantidadOferta").value);
-    
-            // Verificar si el monto de la oferta y la cantidad son válidos
+
             if (montoOferta < {{ producto.price }} && cantidadOferta <= {{ producto.quantity }}) {
                 ofertaPopup.style.display = "none";
                 alert("Oferta realizada con éxito.");
@@ -191,43 +184,24 @@
                 alert("Por favor, ingrese un precio menor al original y una cantidad menor o igual a la disponible.");
             }
         });
-    
-        // Mostrar el contenido del carrito al hacer clic en el botón del carrito
+
         const verCarritoButton = document.getElementById("verCarrito");
         verCarritoButton.addEventListener("click", () => {
             const carritoPopup = document.getElementById("carritoPopup");
-            actualizarListaCarrito(); // Actualizar la lista del carrito
+            actualizarListaCarrito(); 
             carritoPopup.style.display = "block";
         });
-    
-        // Acción al hacer clic en "Seguir Comprando"
+
         const seguirComprandoButton = document.getElementById("seguirComprando");
         seguirComprandoButton.addEventListener("click", () => {
             const carritoPopup = document.getElementById("carritoPopup");
             carritoPopup.style.display = "none";
         });
-    
-        // Acción al hacer clic en "Finalizar Compra"
+
         const finalizarCompraButton = document.getElementById("finalizarCompra");
         finalizarCompraButton.addEventListener("click", () => {
-            // Redireccionar al usuario a finalizacompra.html
             window.location.href = "finalizacompra.html";
         });
-
-        // Acción al hacer clic en "Vaciar Carrito"
-const vaciarCarritoButton = document.getElementById("vaciarCarrito");
-vaciarCarritoButton.addEventListener("click", () => {
-    // Vaciar el carrito en el lado del cliente
-    carrito.length = 0;
-    
-    // También puedes limpiar el carrito en el almacenamiento local
-    limpiarCarrito();
-    
-    // Actualizar la lista del carrito
-    actualizarListaCarrito();
-});
-
     </script>
-    
 </body>
 </html>

@@ -1,1 +1,151 @@
-GRACIAS POR TU COMPRA
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <style>
+        #resumen-carrito {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        #resumen-carrito table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #resumen-carrito table, #resumen-carrito th, #resumen-carrito td {
+            border: 1px solid #ddd;
+        }
+
+        #resumen-carrito th, #resumen-carrito td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #resumen-carrito th {
+            background-color: #f2f2f2;
+        }
+
+        #formulario-tarjeta {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        #formulario-tarjeta label, #formulario-tarjeta input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #confirmar-compra {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #total-compra {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resumen de Compra</h1>
+
+    <div id="resumen-carrito">
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Total de la Compra: <span id="total-compra">$0</span></h2>
+
+    <h2>Detalles de la Tarjeta de Crédito</h2>
+    <div id="formulario-tarjeta">
+        <label for="nombre-tarjeta">Nombre en la Tarjeta (Máximo 20 letras, en mayúsculas):</label>
+        <input type="text" id="nombre-tarjeta" required pattern="[A-Za-z ]{1,20}" oninput="formatNombreTarjeta(this)">
+
+        <label for="numero-tarjeta">Número de Tarjeta (16 dígitos):</label>
+        <input type="text" id="numero-tarjeta" required pattern="\d{16}" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatNumeroTarjeta(this)">
+
+        <label for="vencimiento-tarjeta">Fecha de Vencimiento (MM/YY):</label>
+        <input type="text" id="vencimiento-tarjeta" required pattern="^(0[1-9]|1[0-2])/\d{2}$" placeholder="MM/YY" maxlength="5" oninput="formatVencimientoTarjeta(this)">
+
+    
+        <label for="cvv-tarjeta">CVV (3 dígitos):</label>
+        <input type="password" id="cvv-tarjeta" required pattern="\d{3}" maxlength="3" placeholder="*">
+    </div>
+
+    <button id="confirmar-compra">Confirmar Compra</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            function mostrarResumenCarrito() {
+                const resumenCarrito = document.querySelector("#resumen-carrito tbody");
+                const totalCompra = document.getElementById("total-compra");
+                let total = 0;
+
+                carrito.forEach(item => {
+                    const fila = document.createElement("tr");
+                    fila.innerHTML = `
+                        <td><img src="${item.foto}" alt="${item.producto}" width="50"></td>
+                        <td>${item.producto}</td>
+                        <td>${item.cantidad}</td>
+                    `;
+                    resumenCarrito.appendChild(fila);
+
+                    total += item.precioUnitario * item.cantidad;
+                });
+
+                totalCompra.textContent = `$${total}`;
+            }
+
+            mostrarResumenCarrito();
+
+            const confirmarCompraButton = document.getElementById("confirmar-compra");
+            confirmarCompraButton.addEventListener("click", () => {
+                const confirmacion = confirm("¡Gracias por tu compra!");
+
+                if (confirmacion) {
+                    window.location.href = "home.html";
+                }
+            });
+        });
+        function formatNumeroTarjeta(input) {
+    const cleanedInput = input.value.replace(/\D/g, "");
+
+    const formattedInput = cleanedInput.replace(/(\d{4})(?=\d)/g, "$1 ");
+
+    input.value = formattedInput;
+}
+
+function formatVencimientoTarjeta(input) {
+    const cleanedInput = input.value.replace(/\D/g, "");
+
+    if (cleanedInput.length > 2) {
+        input.value = cleanedInput.slice(0, 2) + '/' + cleanedInput.slice(2, 4);
+    } else {
+        input.value = cleanedInput;
+    }
+}
+function formatNombreTarjeta(input) {
+    input.value = input.value.toUpperCase();
+}
+
+    </script>
+</body>
+</html>
