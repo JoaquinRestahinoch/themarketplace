@@ -12,7 +12,6 @@ def home():
 
 @app.route('/redireccionar', methods=['POST'])
 def redireccionar():
-
     return redirect('/home.html')
 
 @app.route('/categorias.html')
@@ -42,6 +41,32 @@ def mostrar_producto(producto_id):
         return render_template('productos.html', producto=producto)
     else:
         return "Producto no encontrado", 404
+
+@app.route('/finalizacompra.html')
+def fincompra():
+    return render_template('finalizacompra.html')
+
+@app.route('/quienessomos.html')
+def quienessomos():
+    return render_template('quienessomos.html')
+
+@app.route('/defensaconsum.html')
+def defconsum():
+    return render_template('defensaconsum.html')
+
+@app.route('/redireccionarr', methods=['POST'])
+def redireccionarr():
+    return redirect('/finalizacompra.html')
+    
+
+@app.route('/vaciarcarrito', methods=['DELETE'])
+def vaciar_carrito():
+    # Lógica para vaciar el carrito
+    carrito.clear()
+    # También puedes limpiar el carrito en el almacenamiento local
+    limpiarCarrito()
+    return redirect('/home.html')
+
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
