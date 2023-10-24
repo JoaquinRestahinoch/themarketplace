@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guardar Datos</title>
+</head>
+<body>
+    <?php
+    if(isset($_POST['usuario']) && isset($_POST['contrasena'])) {
+        $usuario = $_POST['usuario'];
+        $contrasena = $_POST['contrasena'];
+        // Aquí deberías guardar los datos en una base de datos en lugar de usar almacenamiento local.
+        // Asegúrate de hashear la contraseña antes de guardarla.
+
+        // Almacenamiento local (no seguro):
+        echo "<p>Datos guardados con éxito.</p>";
+    }
+    ?>
+</body>
+</html>

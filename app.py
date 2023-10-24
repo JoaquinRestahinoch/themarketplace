@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, url_for, session
 from productos import productos
 from usuarios import usuarios_db, verificar_credenciales, crear_usuario
 
@@ -57,33 +57,6 @@ def defconsum():
 def redireccionarr():
     return redirect('/finalizacompra.html')
 
-@app.route('/login.html')
-def cargar_login():
-    return render_template('login.html')
-
-@app.route('/verificar_login', methods=['POST'])
-def verificar_login():
-    username = request.form['username']
-    password = request.form['password']
-
-    if verificar_credenciales(username, password):
-        return redirect('/home.html')
-    else:
-        return "Credenciales incorrectas. Inténtalo de nuevo."
-
-@app.route('/registro.html')
-def cargar_registro():
-    return render_template('registro.html')
-
-@app.route('/crear_cuenta', methods=['POST'])
-def crear_cuenta():
-    username = request.form['username']
-    password = request.form['password']
-
-    if crear_usuario(username, password):
-        return redirect('/login.html')
-    else:
-        return "El nombre de usuario ya está en uso. Inténtalo de nuevo."
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
