@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from productos import productos
 from usuarios import usuarios_db, verificar_credenciales, crear_usuario
 
@@ -56,6 +56,55 @@ def defconsum():
 @app.route('/redireccionarr', methods=['POST'])
 def redireccionarr():
     return redirect('/finalizacompra.html')
+
+@app.route('/productos/<int:producto_id>')
+def mostrar_product(producto_id):
+    producto = next((p for p in productos if p['id'] == producto_id), None)
+    if producto:
+        return render_template('productos.html', producto=producto)
+    else:
+        return "Producto no encontrado", 404
+
+
+@app.route('/products', methods=['GET', 'POST'])
+def get_or_add_product():
+    if request.method == 'GET':
+        return jsonify(productos)
+    elif request.method == 'POST':
+        new_product = request.get_json()
+        productos.append(new_product)
+        return jsonify({'message': 'Producto agregado correctamente'})
+
+@app.route('/products/<int:product_id>', methods=['GET', 'PUT', 'DELETE'])
+def get_update_or_delete_product(product_id):
+    if request.method == 'GET':
+        if product_id < 0 or product_id >= len(productos):
+            return jsonify({'error': 'Producto no encontrado'}), 404
+        return jsonify(productos[product_id])
+    elif request.method == 'PUT':
+        if product_id < 0 or product_id >= len(productos):
+            return jsonify({'error': 'Producto no encontrado'}), 404
+        updated_data = request.get_json()
+
+        # Actualiza el producto manteniendo los datos existentes
+        existing_product = productos[product_id]
+        existing_product.update(updated_data)
+
+        return jsonify({'message': 'Producto actualizado correctamente'})
+    elif request.method == 'DELETE':
+        if product_id < 0 or product_id >= len(productos):
+            return jsonify({'error': 'Producto no encontrado'}), 404
+        del productos[product_id]
+        return jsonify({'message': 'Producto eliminado correctamente'})
+    
+
+@app.route('/search', methods=['GET'])
+def search():
+    termino_busqueda = request.args.get('q', '')
+
+    resultado_busqueda = [producto for producto in productos if termino_busqueda.lower() in producto['name'].lower()]
+
+    return render_template('resultado_busqueda.html', resultado_busqueda=resultado_busqueda, termino_busqueda=termino_busqueda)
 
 
 if __name__ == '__main__':

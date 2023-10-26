@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(190, 243, 225);
+    min-height: 100vh;
+
+}
+.container{
+    align-items: center;
+    text-align: center;    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+flex: 1;
+}
+.subcontainer{
+    align-items: baseline;
+    text-align: left;
+    padding-top: 35px;
+}
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 10px;
+}
+main{
+text-align:left ;
+align-self: baseline;
+padding-left: 25px;
+}

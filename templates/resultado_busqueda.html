@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de búsqueda para "{{ search_term }}" - The MarketPlace</title>
+    <link rel="stylesheet" href="static/css/resultado_busqueda.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>The MarketPlace</h1>
+        <header>
+            <form action="/search" method="get">
+                <input type="text" name="q" placeholder="Buscar productos" value="{{ termino_busqueda }}">
+                <button type="submit">Buscar</button>
+            </form>
+        </header>
+
+        <main>
+            <div class="subcontainer">
+                <h2>Resultados de búsqueda para "{{ termino_busqueda }}"</h2>
+                <form action="/home.html">
+                    <button type="submit">Volver al inicio</button>
+                </form>
+            </div>
+            <ul>
+                {% for producto in resultado_busqueda %}
+                    <li>
+                        <a href="{{ url_for('mostrar_producto', producto_id=producto['id']) }}">
+                            <h3>{{ producto['name'] }}</h3>
+                        </a>
+                        <p>{{ producto['descripcion'] }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </main>
+    </div>
+</div>
+
+    <footer>
+        <h3><a href="contacto.html">Contacto</a></h3>
+        <h3><a href="terycond.html">Términos y condiciones</a></h3>
+    </footer>
+  
+    <script src="static/js/app.js"></script>
+</body>
+</html>
