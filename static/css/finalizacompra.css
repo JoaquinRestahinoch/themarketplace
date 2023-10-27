@@ -1,0 +1,46 @@
+#resumen-carrito {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#resumen-carrito table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resumen-carrito table, #resumen-carrito th, #resumen-carrito td {
+    border: 1px solid #ddd;
+}
+
+#resumen-carrito th, #resumen-carrito td {
+    padding: 10px;
+    text-align: center;
+}
+
+#resumen-carrito th {
+    background-color: #f2f2f2;
+}
+
+#formulario-tarjeta {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#formulario-tarjeta label, #formulario-tarjeta input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#confirmar-compra {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#total-compra {
+    font-weight: bold;
+    font-size: 18px;
+}

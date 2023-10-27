@@ -1,63 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-
-        .popup-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .carrito-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #carrito-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        #carrito-list li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        #carrito-list img {
-            max-width: 50px;
-            margin-right: 10px;
-        }
-
-        .carrito-buttons {
-            margin-top: 20px;
-        }
-
-        .carrito-button-item {
-            margin: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa del consumidor</title>
+    <link rel="stylesheet" href="../static/css/productos.css">
 </head>
 <body>
     <h1>Producto</h1>
@@ -156,7 +103,7 @@ function eliminarProducto(index) {
                     producto: "{{ producto.name }}",
                     cantidad: cantidad,
                     precioUnitario: {{ producto.price }},
-                    foto: "{{ producto.foto }}", // Agregar la URL de la imagen del producto
+                    foto: "{{ producto.foto }}",
                 });
                 localStorage.setItem("carrito", JSON.stringify(carrito));
                 alert("Producto agregado al carrito.");
@@ -180,7 +127,8 @@ function eliminarProducto(index) {
             if (montoOferta < {{ producto.price }} && cantidadOferta <= {{ producto.quantity }}) {
                 ofertaPopup.style.display = "none";
                 alert("Oferta realizada con éxito.");
-            } else {
+            }
+            else {
                 alert("Por favor, ingrese un precio menor al original y una cantidad menor o igual a la disponible.");
             }
         });

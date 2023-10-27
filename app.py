@@ -86,7 +86,6 @@ def get_update_or_delete_product(product_id):
             return jsonify({'error': 'Producto no encontrado'}), 404
         updated_data = request.get_json()
 
-        # Actualiza el producto manteniendo los datos existentes
         existing_product = productos[product_id]
         existing_product.update(updated_data)
 
