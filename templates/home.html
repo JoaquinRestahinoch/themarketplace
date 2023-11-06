@@ -4,29 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The MarketPlace</title>
-    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="../static/css/home.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>The MarketPlace</h1>
-            <form action="/search" method="get">
-                <input type="text" name="q" placeholder="Buscar productos">
-                <button type="submit">Buscar</button>
-            </form>
-            <nav>
-                <ul>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="../static/img/logo.png" alt="The MarketPlace Logo">
+                </a>
+                <ul class="menu">
+                    <li><a href="productos.html">Productos</a></li>
                     <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="finalizacompra.html">Finalizar compra</a></li>
                 </ul>
-            </nav>
-        </header>
-    </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Bienvenido a The MarketPlace</h1>
+                <p>Tu lugar para comprar y vender productos de calidad.</p>
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="Buscar productos">
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+        </div>
+        
+       
+
+
+            <section class="featured-products">
+                <h2>Productos Destacados</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="static/images/product1.jpg" alt="Producto 1">
+                        <h3>Nombre del Producto 1</h3>
+                        <p>Descripción del producto 1.</p>
+                        <span class="price">$99.99</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+
+
+                    <div class="product">
+                        <img src="static/images/product2.jpg" alt="Producto 2">
+                        <h3>Nombre del Producto 2</h3>
+                        <p>Descripción del producto 2.</p>
+                        <span class="price">$79.99</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+
+
+                    <div class="product">
+                        <img src="static/images/product2.jpg" alt="Producto 2">
+                        <h3>Nombre del Producto 3</h3>
+                        <p>Descripción del producto 3.</p>
+                        <span class="price">$79.99</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
 
     <footer>
-        <h3><a href="contacto.html">Contacto</a></h3>
-        <h3><a href="terycond.html">Términos y condiciones</a></h3>
+        <div class="container">
+            <div class="footer-menu">
+                <h3><a href="contacto.html">Contacto</a></h3>
+                <h3><a href="terycond.html">Términos y Condiciones</a></h3>
+                <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
+                <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
+                <a href="#"><img src="../static/img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="../static/img/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
-    
-    <script src="../static/js/home.js"></script>
+
+
+    <script src="static/js/app.js"></script>
 </body>
 </html>
