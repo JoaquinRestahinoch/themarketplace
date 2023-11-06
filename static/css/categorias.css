@@ -1,32 +1,110 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos de las categorías */
 .category {
     width: 200px;
     height: 200px;
-    background-color: #fff;
-    margin: 10px;
-    display: inline-block;
+    margin: 20px;
     text-align: center;
-    overflow: hidden;
     border: 2px solid #ccc;
     border-radius: 10px;
-    transition: all 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.category-bg.category-deportes {
+    background-image: url('../img/deportes.png');
+    
+}
+
+.category-bg.category-moda {
+    background-image: url('../img/moda.png');
+}
+
+.category-bg.category-electrodomesticos {
+    background-image: url('../img/electrodomesticos.png');
+}
+
+.category-bg.category-tecnologia {
+    background-image: url('../img/tecnologia.png');
+}
+
+.category-bg.category-herramientas {
+    background-image: url('../img/herramientas.png');
 }
 
 .category:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Efecto de aumento al hacer hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
 }
 
-.category-bg {
+.category a.link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    height: 100%;
+}
+
+.category .category-bg {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
 }
 
 h2 {
-    position: relative;
-    top: 80px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
