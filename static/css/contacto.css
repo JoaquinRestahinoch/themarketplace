@@ -9,12 +9,12 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 21px;
 }
 
 
 header {
-    background-color: #007BFF;
+    background-color: rgb(255, 191, 0);
     padding: 20px 0;
     text-align: center;
 }
