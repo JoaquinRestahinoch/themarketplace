@@ -26,10 +26,21 @@
                 <label for="consulta"> Consulta:</label>
                 <input name="consulta" type="text" tabindex="4" placeholder="Ingrese su consulta"><br><br>
         
-                <input type="submit" value="Enviar">
+                <a href="home.html"><input type="submit" value="Enviar" onclick="submitForm();"></a>
             </fieldset>             
         </form>
         
     </div>
+
+    <script>
+        function submitForm() {
+            var form = document.querySelector("form");
+            form.submit(); 
+
+            setTimeout(function () {
+                window.location.href = "home.html";
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
