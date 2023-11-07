@@ -2,45 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de búsqueda para "{{ search_term }}" - The MarketPlace</title>
+    <title>Resultado de tu búsqueda</title>
     <link rel="stylesheet" href="../static/css/resultado_busqueda.css">
-
 </head>
 <body>
-    <div class="container">
-        <h1>The MarketPlace</h1>
-        <header>
+    <header>
+        <div class="logo-container">
+            <a href="home.html" class="logo">
+                <img src="../static/img/logo.png" alt="Logo de TheMarketPlace">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="search-bar">
             <form action="/search" method="get">
                 <input type="text" name="q" placeholder="Buscar productos" value="{{ termino_busqueda }}">
                 <button type="submit">Buscar</button>
             </form>
-        </header>
-
-        <main>
-            <div class="subcontainer">
-                <h2>Resultados de búsqueda para "{{ termino_busqueda }}"</h2>
-                <form action="/home.html">
-                    <button type="submit">Volver al inicio</button>
-                </form>
-            </div>
-            <ul>
-                {% for producto in resultado_busqueda %}
-                    <li>
-                        <a href="{{ url_for('mostrar_producto', producto_id=producto['id']) }}">
-                            <h3>{{ producto['name'] }}</h3>
-                        </a>
-                        <p>{{ producto['descripcion'] }}</p>
-                    </li>
-                {% endfor %}
-            </ul>
-        </main>
-    </div>
-</div>
+        </div>
+        <h2>Resultados de búsqueda para "{{ termino_busqueda }}"</h2>
+        <ul class="product-list">
+            {% for producto in resultado_busqueda %}
+                <li class="product">
+                    <a href="{{ url_for('mostrar_producto', producto_id=producto['id']) }}">
+                        <div class="product-image">
+                            <img src="{{ producto['foto'] }}" alt="{{ producto['name'] }}">
+                        </div>
+                        <h3 class="product-name">{{ producto['name'] }}</h3>
+                        <p class="price">${{ producto['price'] }}</p>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <a href="home.html" class="back-button">Volver al inicio</a>
 
     <footer>
-        <h3><a href="contacto.html">Contacto</a></h3>
-        <h3><a href="terycond.html">Términos y condiciones</a></h3>
+        <div class="container">
+            <div class="footer-menu">
+                <h3><a href="contacto.html">Contacto</a></h3>
+                <h3><a href="terycond.html">Términos y Condiciones</a></h3>
+                <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
+                <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
+                <a href="#"><img src="../static/img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="../static/img/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
