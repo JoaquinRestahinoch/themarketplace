@@ -1,78 +1,116 @@
-/* Estilos generales */
-header {
-    background-color: #094a8f;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Estilos para el logo */
-.logo img {
-    max-width: 350px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Estilos para los enlaces de redes sociales */
-.social-links a img {
-    margin: 0 10px;
-    width: 30px;
-}
-
-/* Estilos para el contenido principal */
-.custom-select, .seleccionar-button, .white-section, .button-container {
-    text-align: center;
-}
-
-/* Estilos para el botón de seleccionar */
-.seleccionar-button {
-    background-color: rgb(14, 234, 106);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.seleccionar-button:hover {
-    background-color: #36bd0d;
-}
-
-/* Estilos para la sección blanca */
-.white-section {
-    background-color: #ffffff;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 230px;
-    align-items: center;
-}
-
-/* Estilos para el select personalizado */
-.custom-select select {
-    width: 30%;
-    font-size: 16px;
-}
-
-/* Estilos para el título en la sección blanca */
-.white-section h2 {
-    color: #fff;
-    text-align: center;
-}
-    
-/* Estilos para el pie de página */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 40px ;
-    margin-top: 280px;
-}
-
-/* Estilos para los elementos de menú en el pie de página */
-.footer-menu h3, .footer-menu a {
-    margin: 10px 0;
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+  }
+  
+  
+  header {
+      background-color: #094a8f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+  }
+  
+  .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .logo {
+      max-width: 450px;
+      display: block;
+  }
+  
+  
+  .white-section {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 20px auto;
+  }
+  
+  h2 {
+      color: #094a8f;
+      font-size: 30px;
+  }
+  
+  .custom-select {
+      text-align: center;
+      margin-top: 20px;
+  }
+  
+  select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+  }
+  
+  .select-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  
+  .flag {
+      max-width: 150px;
+      border: 2px solid #094a8f; 
+      border-radius: 5px;
+      display: none;
+      margin: 10px auto;
+  }
+  
+  
+  .seleccionar-button {
+      background-color: #094a8f;
+      color: #fff;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      margin: 20px auto;
+      font-size: 18px;
+  }
+  
+  .seleccionar-button:hover {
+      background-color: #36bd0d;
+  }
+  
+  
+  footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+  }
+  
+  .footer-menu {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .footer-menu a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 20px;
+  }

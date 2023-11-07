@@ -8,47 +8,39 @@
 </head>
 <body>
     <header>
-        <a href="home.html" class="logo">
-            <img src="../static/img/logo.png" alt="The MarketPlace Logo">
-        </a>    </header>
+        <div class="logo-container">
+            <img src="../static/img/logo.png" alt="The MarketPlace Logo" class="logo">
+        </div>
+    </header>
 
     <main>
         <div class="white-section">
             <h2>Selecciona tu país</h2>
             <div class="custom-select">
-                <label>En qué país estás comprando:</label>
-                <div class="select-selected">
+                <label for="countryDropdown">En qué país estás comprando:</label>
+                <div class="select-container">
                     <select id="countryDropdown">
                         <option value="" disabled selected>Selecciona un país</option>
                     </select>
-                    <img id="flagImage" src="" style="width: 70px;">
                 </div>
             </div>
 
             <div class="button-container">
-                <form action="/redireccionar" method="POST">
-                    <button type="submit" class="seleccionar-button">Seleccionar</button>
-                </form>
+                <img id="flagImage" src="" alt="Bandera del país" class="flag">
+                <button type="button" class="seleccionar-button" id="selectButton">Seleccionar</button>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-menu">
-                <h3><a href="contacto.html">Contacto</a></h3>
-                <h3><a href="terycond.html">Términos y Condiciones</a></h3>
-                <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
-                <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
-            </div>
-            <div class="social-links">
-                <a href="#"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
-                <a href="#"><img src="../static/img/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="../static/img/instagram.png" alt="Instagram"></a>
-            </div>
-    
+        <div class="footer-menu">
+            <h3><a href="contacto.html">Contacto</a></h3>
+            <h3><a href="terycond.html">Términos y condiciones</a></h3>
+            <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
+            <h3><a href="defensaconsum.html" >Defensa del Consumidor</a></h3>
+        </div>
     </footer>
 
-    <script src="../static/js/home.js"></script>
+    <script src="../static/js/inicio.js"></script>
 </body>
 </html>
