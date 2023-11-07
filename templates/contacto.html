@@ -11,7 +11,7 @@
         <img src="../static/img/logo.png" alt="Logo"> 
 
     <div class="container">
-        <form action="https://script.google.com/macros/s/AKfycbxmCdNbQGthXUA-hTA0wKUoIIHKwI_6dqvn5H6O38RHrqB6QPK5BnU41f5LujmaHpwC/exec" method="post">
+        <form action="https://script.google.com/macros/s/AKfycbxWOD7mH4QjNiz36i0IkY47cPNZkPi9nhsaS3YmcOQbWudscoJ6xB35DHxhNyp0b9jsoA/exec" method="post">
             <fieldset>
                 <legend>Déjanos tu consulta!</legend> <br>
                 <label for="nombre"> Nombre:</label>
@@ -26,10 +26,21 @@
                 <label for="consulta"> Consulta:</label>
                 <input name="consulta" type="text" tabindex="4" placeholder="Ingrese su consulta"><br><br>
         
-                <input type="submit" value="Enviar">
+                <a href="home.html"><input type="submit" value="Enviar" onclick="submitForm();"></a>
             </fieldset>             
         </form>
         
     </div>
+
+    <script>
+        function submitForm() {
+            var form = document.querySelector("form");
+            form.submit(); 
+
+            setTimeout(function () {
+                window.location.href = "home.html";
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
