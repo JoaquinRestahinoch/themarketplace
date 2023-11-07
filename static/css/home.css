@@ -1,110 +1,62 @@
+/* Estilos para el encabezado (header) */
 header {
     background-color: #094a8f;
     color: #fff;
     padding: 20px 0;
 }
 
-
-
+/* Estilos para la barra de navegación (navbar) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+/* Estilos para el logotipo (logo) */
 .logo img {
     max-width: 300px;
     margin-left: 100px;
     margin-right: 0;
 }
 
-
+/* Estilos para el menú de navegación (menu) */
 .menu {
     list-style: none;
 }
 
-
+/* Estilos para los elementos del menú (menu items) */
 .menu li {
     display: inline;
     margin-right: 20px;
-    
 }
 
-
+/* Estilos para los enlaces del menú (menu links) */
 .menu li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 18px; 
-
+    font-size: 18px;
 }
 
+/* Continúa con los estilos para la sección hero después de este punto */
 
-
-
-
-
+/* Estilos para la sección hero */
 .hero {
+    background-image: url('../static/img/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     padding: 100px 0;
     color: #000000;
-    position: relative; 
 }
 
-
+/* Estilos adicionales para la sección hero */
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-.cta-button {
-    display: inline-block;
-    background-color: #ff4500;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-
-.cta-button:hover {
-    background-color: #ff6600;
-}
-
-
-.featured-products {
-    padding: 0px 0;
-    margin-top: -40px;
-}
-
-.featured-products h2 {
-    font-size: 30px;
-}
-
-
-
-
-
-
-
-
-
-
+/* Estilos para el pie de página */
 footer {
     background-color: #333;
     color: #fff;
@@ -113,25 +65,32 @@ footer {
     margin-top: -200px;
 }
 
-
+/* Estilos para los elementos de menú en el pie de página */
 .footer-menu h3 {
     margin: 10px 0;
 }
 
-
+/* Estilos para los enlaces en el pie de página */
 .footer-menu a {
     text-decoration: none;
     color: #fff;
     font-size: 25px;
 }
 
-
-.social-links a img{
+/* Estilos para los enlaces de redes sociales */
+.social-links a img {
     margin: 0 10px;
     width: 30px;
 }
 
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Agregado un comentario explicando el padding */
+}
 
+/* Estilos para la sección de presentación de imágenes (slideshow) */
 #slideshow {
     margin: 0 auto;
     padding-top: 50px;
@@ -139,7 +98,7 @@ footer {
     width: 100%;
 }
 
-
+/* Estilos para el título del slideshow */
 .slideshow-title {
     font-family: 'Arial', sans-serif; 
     font-size: 36px; 
@@ -148,101 +107,138 @@ footer {
     margin-top: 20px; 
 }
 
-
+/* Estilos para los subtítulos */
 .sub-heading {
-	padding-top: 50px;
-	font-size: 18px;
-} .sub-heading-two {
-	font-size: 15px;
-} .sub-heading-three {
-	font-size: 13px;
-} .sub-heading-four {
-	font-size: 11px;
-} .sub-heading-five {
-	font-size: 9px;
-} .sub-heading-six {
-	font-size: 7px;
-} .sub-heading-seven {
-	font-size: 5px;
-} .sub-heading-eight {
-	font-size: 3px;
-} .sub-heading-nine {
-	font-size: 1px;
+    font-size: 18px;
+    padding-top: 50px; /* Agregado un comentario explicando el padding */
 }
 
+/* Estilos para subtítulos adicionales con tamaños de fuente más pequeños */
+.sub-heading-two {
+    font-size: 15px;
+}
+
+.sub-heading-three {
+    font-size: 13px;
+}
+
+.sub-heading-four {
+    font-size: 11px;
+}
+
+.sub-heading-five {
+    font-size: 9px;
+}
+
+.sub-heading-six {
+    font-size: 7px;
+}
+
+.sub-heading-seven {
+    font-size: 5px;
+}
+
+.sub-heading-eight {
+    font-size: 3px;
+}
+
+.sub-heading-nine {
+    font-size: 1px;
+}
+
+/* Estilos para el carrusel de contenido */
 .entire-content {
-	margin: auto;
-	width: 190px;
-	perspective: 1000px;
-	position: relative;
-	padding-top: 80px;
+    margin: auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px; /* Agregado un comentario explicando el padding */
 }
 
+/* Estilos para el contenido del carrusel */
 .content-carrousel {
-	width: 100%;
-	position: absolute;
-	float: right;
-	animation: rotar 15s infinite linear;
-	transform-style: preserve-3d;
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
 }
 
-.content-carrousel:hover {
-	animation-play-state: paused;
-	cursor: pointer;
-}
-
+/* Estilos para las figuras dentro del carrusel y sus transformaciones */
 .content-carrousel figure {
-	width: 100%;
-	height: 100px;
-	border: 1px solid #3b444b;
-	overflow: hidden;
-	position: absolute;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #3b444b;
+    overflow: hidden;
+    position: absolute;
 }
 
 .content-carrousel figure:nth-child(1) {
-	transform: rotateY(0deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(2) {
-	transform: rotateY(40deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(3) {
-	transform: rotateY(80deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(4) {
-	transform: rotateY(120deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(5) {
-	transform: rotateY(160deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(6) {
-	transform: rotateY(200deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(7) {
-	transform: rotateY(240deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(8) {
-	transform: rotateY(280deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(9) {
-	transform: rotateY(320deg) translateZ(300px); 
-} .content-carrousel figure:nth-child(10) {
-	transform: rotateY(360deg) translateZ(300px); 
-} 
+    transform: rotateY(0deg) translateZ(300px); 
+}
 
+.content-carrousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(300px); 
+}
+
+.content-carrousel figure:nth-child(10) {
+    transform: rotateY(360deg) translateZ(300px); 
+}
+
+/* Estilos para la sombra del contenido en el carrusel */
 .shadow {
     position: absolute;
     box-shadow: 0px 0px 20px 0px #000;
     border-radius: 1px;
 }
 
+/* Estilos para las imágenes dentro del carrusel */
 .content-carrousel img {
-	image-rendering: auto;
-	transition: all 300ms;
-	width: 100%;
-	height: 100%;
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
 }
 
+/* Estilos para las imágenes al hacer hover */
 .content-carrousel img:hover {
-	transform: scale(1.2);
-	transition: all 300ms;
+    transform: scale(1.2);
+    transition: all 300ms;
 }
 
+/* Animación de rotación para el carrusel */
 @keyframes rotar {
-	from {
-		transform: rotateY(0deg);
-	} to {
-		transform: rotateY(360deg);
-	}
+    from {
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(360deg);
+    }
 }

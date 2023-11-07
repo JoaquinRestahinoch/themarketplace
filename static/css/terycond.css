@@ -1,4 +1,4 @@
-
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,20 +13,39 @@ body {
     padding: 20px;
 }
 
-
+/* Encabezado */
 header {
     background-color: #094a8f;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
-
-header img {
+.logo img {
     max-width: 300px;
+    display: block;
+    margin: 0 auto;
 }
 
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
 
+.footer-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-links a img {
+    margin: 0 10px;
+    width: 30px;
+}
+
+/* Título principal */
 h1 {
     font-size: 36px;
     margin: 20px 0;
@@ -34,6 +53,7 @@ h1 {
     text-align: center;
 }
 
+/* Secciones */
 section {
     background-color: #fff;
     padding: 20px;
@@ -63,50 +83,26 @@ ul, ol {
     padding: 0 20px;
 }
 
-
 li {
     margin: 10px 0;
 }
 
-
-.section {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-
-.button {
-    display: inline-block;
+/* Botón "Volver al inicio" */
+.back-button {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
     background-color: #007BFF;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.button:hover {
+.back-button:hover {
     background-color: #0056b3;
-}
-
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-}
-
-
-.footer-menu {
-    margin: 10px 0;
-}
-
-.footer-menu a {
-    text-decoration: none;
-    color: #fff;
 }

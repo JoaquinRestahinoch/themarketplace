@@ -1,32 +1,30 @@
+/* Estilos generales */
 header {
     background-color: #094a8f;
     color: #fff;
-    padding: 20px ;
+    padding: 20px;
     text-align: center;
 }
-img {
+
+/* Estilos para el logo */
+.logo img {
     max-width: 350px;
-    display: block; 
-    margin: 0 auto; }
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-    width: 100%;
-    margin-top: 70px; }
-
-
-
-.footer-menu a {
-    text-decoration: none;
-    color: white 
+    display: block;
+    margin: 0 auto;
 }
 
-.custom-select {
+/* Estilos para los enlaces de redes sociales */
+.social-links a img {
+    margin: 0 10px;
+    width: 30px;
+}
+
+/* Estilos para el contenido principal */
+.custom-select, .seleccionar-button, .white-section, .button-container {
     text-align: center;
 }
 
+/* Estilos para el botón de seleccionar */
 .seleccionar-button {
     background-color: rgb(14, 234, 106);
     color: #fff;
@@ -38,27 +36,43 @@ footer {
 }
 
 .seleccionar-button:hover {
-    background-color: #36bd0d; }
+    background-color: #36bd0d;
+}
 
+/* Estilos para la sección blanca */
 .white-section {
     background-color: #ffffff;
     text-align: center;
     width: 100%;
-    margin-bottom: 230px; 
+    margin-bottom: 230px;
     align-items: center;
 }
 
+/* Estilos para el select personalizado */
 .custom-select select {
     width: 30%;
     font-size: 16px;
-     
 }
 
+/* Estilos para el título en la sección blanca */
 .white-section h2 {
     color: #fff;
     text-align: center;
 }
+    
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px ;
+    margin-top: 280px;
+}
 
-.button-container {
-    margin-top: 20px; 
+/* Estilos para los elementos de menú en el pie de página */
+.footer-menu h3, .footer-menu a {
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
 }
