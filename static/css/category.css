@@ -21,9 +21,6 @@ header {
     padding: 0 20px;
 }
 
-.menu {
-    list-style: none;
-}
 
 
 .menu li {
@@ -144,3 +141,25 @@ header {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    clear: both;
+  }
+  
+  .footer-menu h3 {
+    margin: 10px 0;
+  }
+  
+  .footer-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  .social-links a img {
+    margin: 0 10px;
+    width: 30px;
+  }
