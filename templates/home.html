@@ -34,69 +34,60 @@
                 </form>
             </section>
         </div>
-
-        <section class="featured-products">
-            <h2>Productos Destacados</h2>
-            <div class="container">
-                <section id="slideshow">
-                    <div class="entire-content">
-                        <div class="content-carrousel">
-                                <figure class="shadow">
-                                    <a href="/productos/0">
-                                        <img src="../static/img/prod0.png" alt="Producto 0">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/1">
-                                        <img src="../static/img/prod1.png" alt="Producto 1">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/2">
-                                        <img src="../static/img/prod2.png" alt="Producto 2">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/3">
-                                        <img src="../static/img/prod3.png" alt="Producto 3">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/4">
-                                        <img src="../static/img/prod4.png" alt="Producto 4">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/5">
-                                        <img src="../static/img/prod5.png" alt="Producto 5">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/6">
-                                        <img src="../static/img/prod6.png" alt="Producto 6">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/7">
-                                        <img src="../static/img/prod7.png" alt="Producto 7">
-                                    </a>
-                                </figure>
-                                <figure class="shadow">
-                                    <a href="/productos/8">
-                                        <img src="../static/img/prod8.png" alt="Producto 8">
-                                    </a>
-                                </figure>
-                                
-                            
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </div>
-</main>
+    </main>
+<h1>Productos Destacados</h1>
+<section class="carousel" aria-label="Gallery">
+    <ol class="carousel__viewport">
+        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper" style="background-image: url('../static/img/prod21.png');">
+            <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+            <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+          </div>
+        </li>
+        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper" style="background-image: url('../static/img/prod22.png');"></div>
+          <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+          <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+        </li>
+        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper" style="background-image: url('../static/img/prod23.png');"></div>
+          <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+          <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+        </li>
+        <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper" style="background-image: url('../static/img/prod24.png');"></div>
+          <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+          <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+        </li>
+      </ol>
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+      </li>
+      <li class = "carousel__navigation-item">
+        <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+      </li>
+    </ol>
+  </aside>
+</section>
 <div class="slider">
     <div class="slide-track">
+        <div class="slide">
+            <img src="../static/img/ucema.jpg" height="90" width="120" alt="" />
+        </div>
+        <div class="slide">
+            <img src="../static/img/bbva.PNG" height="90" width="120" alt="" />
+        </div>
+        <div class="slide">
+            <img src="../static/img/nike.jpg" height="90" width="120" alt="" />
+        </div>
         <div class="slide">
             <img src="../static/img/ucema.jpg" height="90" width="120" alt="" />
         </div>
@@ -135,9 +126,9 @@
             <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
         </div>
         <div class="social-links">
-            <a href="#"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
-            <a href="#"><img src="../static/img/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="../static/img/instagram.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/marketplacecollective/"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
+            <a href="https://twitter.com/TheMarketplace"><img src="../static/img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/TheMarketPlace/"><img src="../static/img/instagram.png" alt="Instagram"></a>
         </div>
     </div>
 </footer>
