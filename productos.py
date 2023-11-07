@@ -1,7 +1,6 @@
 productos = [
     {'id': 0, 'name': 'Laptop Lenovo negra 15,6 con 512 GB', 'categoria': 'tecnologia', 'price': 800000, 'quantity': 1, 'descripcion': 'Una potente laptop Lenovo con pantalla de 15,6 pulgadas y 512 GB de almacenamiento para tus necesidades tecnológicas.', 'foto': '/static/img/prod0.png'},
     {'id': 1, 'name': 'iPhone 14 Pro Max - Apple', 'categoria': 'tecnologia', 'price': 90000, 'quantity': 2, 'descripcion': 'El último iPhone 14 Pro Max de Apple con características innovadoras para mantenerte conectado y productivo.', 'foto': '/static/img/prod1.png'},
-    {'id': 2, 'name': 'Lavadora de carga frontal LG', 'categoria': 'electrodomesticos', 'price': 900000, 'quantity': 2, 'descripcion': 'Una lavadora de carga frontal LG eficiente y silenciosa para mantener tu ropa impecable.', 'foto': '/static/img/prod2.png'},
     {'id': 3, 'name': 'Aspiradora Dyson V11 Absolute', 'categoria': 'electrodomesticos', 'price': 600000, 'quantity': 3, 'descripcion': 'La aspiradora Dyson V11 Absolute para una limpieza impecable en tu hogar.', 'foto': '/static/img/prod3.png'},
     {'id': 4, 'name': 'Bicicleta de montaña Trek 29er', 'categoria': 'deportes', 'price': 1500000, 'quantity': 4, 'descripcion': 'Una bicicleta de montaña Trek 29er para aventuras al aire libre y rutas emocionantes.', 'foto': '/static/img/prod4.png'},
     {'id': 5, 'name': 'Camiseta de fútbol', 'categoria': 'indumentaria', 'price': 50000, 'quantity': 10, 'descripcion': 'Una camiseta de fútbol de alta calidad para mostrar tu pasión por el deporte.', 'foto': '/static/img/prod5.png'},

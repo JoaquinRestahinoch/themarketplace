@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category</title>
     <link rel="stylesheet" href="../static/css/category.css">
-
 </head>
 <body>
     <header>
@@ -22,13 +21,19 @@
             </div>
         </nav>
     </header>
-    <h1>Categoría: {{ categoria }}</h1>
-    <ul>
+    <h1>{{ categoria|title }}</h1>
+    <ul class="product-list">
         {% for producto in productos %}
-            <li>
-                <h3><a href="/productos/{{ producto.id }}">{{ producto.name }}</a></h3>
+            <li class="product">
+                <a href="/productos/{{ producto.id }}">
+                    <img src="{{ producto.foto }}">
+                    <h3>{{ producto.name }}</h3>
+                    <p class="price">${{ producto.price }}</p>
+                </a>
             </li>
         {% endfor %}
     </ul>
+    
 </body>
 </html>
+
