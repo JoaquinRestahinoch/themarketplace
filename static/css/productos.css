@@ -27,7 +27,7 @@
                 position: absolute;
                 top: 20px;
                 right: 20px;
-                background-color: #007bff;
+                background-color: #094a8f;
                 color: white;
                 padding: 10px 20px;
                 border: none;
@@ -59,15 +59,43 @@
                 margin: 10px;
             }
 
+
 body {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0;  
 }
 
+body h1{
+    font-size: 30px;
+}
+
+body img {
+    max-height: 300px;
+}
+
+.cuerpo{
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+    .cuerpo img{
+        margin-left: 50px;
+        margin-top: 70px;
+    }
+
+    .cuerpo2{
+        margin-top: -300px;
+        margin-left: 400px;
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        padding: 30px;
+        border-width: 2px 2px 2px 2px;
+    }
+
 button {
-    background-color: #007bff;
+    background-color: #094a8f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -76,7 +104,92 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #094a8f;
 }
 
 
+/* Estilos para el encabezado (header) */
+header {
+    background-color: #094a8f;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Estilos para la barra de navegación (navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logotipo (logo) */
+.logo img {
+    max-width: 300px;
+    margin-left: 100px;
+    margin-right: 0;
+}
+
+/* Estilos para el menú de navegación (menu) */
+.menu {
+    list-style: none;
+}
+
+/* Estilos para los elementos del menú (menu items) */
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Estilos para los enlaces del menú (menu links) */
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.faq-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.faq-section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-list li {
+    margin-bottom: 15px;
+}
+
+.question {
+    background-color: #094a8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.question:hover {
+    background-color: #09316a;
+}

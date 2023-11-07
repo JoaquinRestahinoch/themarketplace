@@ -6,18 +6,35 @@
     <title>Productos</title>
     <link rel="stylesheet" href="../static/css/productos.css">
 </head>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../static/img/logo.png" alt="The MarketPlace Logo">
+            </a>
+            <ul class="menu">
+                <li> <a href="home.html">Inicio</a></li>
+                <li> <a href="productos.html">Productos</a></li>
+                <li> <a href="categorias.html">Categorías</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
 <body>
-    <h1>Producto</h1>
-    <div>
-        <img src="{{ producto.foto }}" alt="{{ producto.name }}">
-        <h2>{{ producto.name }}</h2>
-        <p>{{ producto.descripcion }}</p>
-        <p><b>Precio: $ {{ producto.price }}</b></p>
-        <p><b>Cantidad disponible: {{ producto.quantity }}</b></p>
-        <a href="/category/{{ producto.categoria }}">Volver a {{ producto.categoria }}</a>
-        <br>
-        <button id="agregarCarrito">Agregar al Carrito</button>
-        <button id="ofertar">Ofertar</button>
+    <div class="cuerpo">
+            <img src="{{ producto.foto }}" alt="{{ producto.name }}">
+            <div class="cuerpo2">
+                <h2>{{ producto.name }}</h2>
+                <p>{{ producto.descripcion }}</p>
+                <p><b> $ {{ producto.price }}</b></p>
+                <p><b>Cantidad disponible: {{ producto.quantity }}</b></p>
+                <a href="/category/{{ producto.categoria }}">Volver a {{ producto.categoria }}</a>
+                <br>
+                <br>
+                <button id="agregarCarrito">Agregar al Carrito</button>
+                <button id="ofertar">Ofertar</button>
+            </div>
     </div>
 
     <div id="ofertaPopup" class="popup">
@@ -47,6 +64,24 @@
         </div>
     </div>
 
+    <div class="faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <ul class="faq-list">
+            <li>
+                <button class="question">¿Cómo hago un pedido?</button>
+                <div class="answer">Para hacer un pedido, simplemente navega por nuestra tienda en línea, selecciona los productos que deseas y agrégalos al carrito de compras. Luego, ve al carrito de compras y sigue los pasos para completar tu pedido.</div>
+            </li>
+            <li>
+                <button class="question">¿Cuáles son las opciones de pago?</button>
+                <div class="answer">Aceptamos pagos con tarjeta de crédito y débito, Mercado Pago y transferencia bancaria. Puedes seleccionar la opción de pago durante el proceso de compra.</div>
+            </li>
+            <li>
+                <button class="question">¿Cuánto tiempo toma la entrega?</button>
+                <div class="answer">El tiempo de entrega depende de tu ubicación y el método de envío seleccionado. Normalmente, los pedidos se entregan en 3-5 días hábiles.</div>
+            </li>
+        </ul>
+    </div>
+
     <script>
         function limpiarCarrito() {
             localStorage.removeItem("carrito");
@@ -69,7 +104,6 @@ function actualizarListaCarrito() {
             <div>
                 <strong>${item.producto}</strong><br>
                 Cantidad: ${item.cantidad}<br>
-                Precio Unitario: $${item.precioUnitario}<br>
                 Precio Total: $${item.precioUnitario * item.cantidad}
             </div>
             <button class="eliminar-producto" data-index="${index}">Eliminar</button>
@@ -97,7 +131,7 @@ function eliminarProducto(index) {
         const agregarCarritoButton = document.getElementById("agregarCarrito");
 
         agregarCarritoButton.addEventListener("click", () => {
-            const cantidad = parseFloat(prompt("Ingrese la cantidad (menor o igual a la disponible):"));
+            const cantidad = parseFloat(prompt("Ingrese la cantidad:"));
             if (cantidad <= {{ producto.quantity }}) {
                 carrito.push({
                     producto: "{{ producto.name }}",
@@ -151,5 +185,25 @@ function eliminarProducto(index) {
             window.location.href = "finalizacompra.html";
         });
     </script>
+
+    <script>
+    
+        const questions = document.querySelectorAll(".question");
+        const answers = document.querySelectorAll(".answer");
+
+      
+        questions.forEach((question, index) => {
+            question.addEventListener("click", () => {
+                
+                if (answers[index].style.display === "block") {
+                    answers[index].style.display = "none";
+                } else {
+                    answers[index].style.display = "block";
+                }
+            });
+        });
+    </script>
+
+
 </body>
 </html>
