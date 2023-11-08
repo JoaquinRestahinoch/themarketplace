@@ -3,6 +3,8 @@
   font-family: 'Nunito', sans-serif;
 }
 
+/* header */
+
 header {
   background-color: #094a8f;
   color: #fff;
@@ -17,7 +19,7 @@ header {
 
 .logo img {
   max-width: 300px;
-  margin-left: 100px;
+  margin-left: -180px;
 }
 
 .menu {
@@ -35,6 +37,9 @@ header {
   font-weight: bold;
   font-size: 18px;
 }
+
+/* Fin de header*/
+
 
 .hero {
   background-image: url('../static/img/hero-background.jpg');
