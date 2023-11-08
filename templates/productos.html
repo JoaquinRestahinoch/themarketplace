@@ -43,6 +43,7 @@
 
     <div id="ofertaPopup" class="popup">
         <div class="popup-content">
+            <button id="cerrarPopup" class="cerrar-popup">X</button>
             <h2>Realizar una oferta</h2>
             <p>Precio del producto: ${{ producto.price }}</p>
             <p>Cantidad disponible: {{ producto.quantity }}</p>
@@ -207,6 +208,34 @@ function eliminarProducto(index) {
             });
         });
     </script>
+
+    <script>
+        document.getElementById('cerrarPopup').addEventListener('click', function() {
+            document.getElementById('ofertaPopup').style.display = 'none';
+        });
+    </script>
+
+
+
+<footer>
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <h3><a href="contacto.html">Contacto</a></h3>
+                <h3>|</h3>
+                <h3><a href="terycond.html">Términos y Condiciones</a></h3>
+                <h3>|</h3>
+                <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
+                <h3>|</h3>
+                <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/TheMarketPlace/"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
+                <a href="https://twitter.com/TheMarketplace"><img src="../static/img/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/marketplacecollective/"><img src="../static/img/instagram.png" alt="Instagram" class="instagram"></a>
+            </div>            </div>
+    </footer>
+</footer>   
 
 
 </body>
