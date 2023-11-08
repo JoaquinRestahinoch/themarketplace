@@ -1,14 +1,15 @@
-*{
+* {
   font-family: 'Hind Madurai', sans-serif;
   font-family: 'Nunito', sans-serif;
 }
 
+/* Estilos para la cabecera */
 header {
   background-color: #004AAD;
   color: #fff;
   padding: 20px 0;
   border-bottom-left-radius: 6vh;
-    border-bottom-right-radius: 6vh;
+  border-bottom-right-radius: 6vh;
 }
 
 .navbar {
@@ -39,6 +40,7 @@ header {
   font-size: 18px;
 }
 
+/* Estilos para la sección hero */
 .hero {
   background-image: url('../static/img/hero-background.jpg');
   background-size: cover;
@@ -55,8 +57,7 @@ header {
   font-weight: bold;
 }
 
-/* footer */
-
+/* Estilos para el footer */
 footer {
   background-color: #333;
   color: #fff;
@@ -66,14 +67,14 @@ footer {
 }
 
 .footer-menu {
-  display: inline-block; 
+  display: inline-block;
   margin: 10px 0;
 }
 
 .footer-menu h3 {
   font-weight: bold;
-  display: inline; 
-  margin-right: 20px; 
+  display: inline;
+  margin-right: 20px;
 }
 
 .footer-menu a {
@@ -88,21 +89,22 @@ footer {
   width: 30px;
 }
 
+/* Estilos para el slider */
 @keyframes rotar {
   from {
-      transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
   to {
-      transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
   }
 }
 
@@ -151,46 +153,46 @@ footer {
 
 @keyframes tonext {
   75% {
-      left: 0;
+    left: 0;
   }
   95% {
-      left: 100%;
+    left: 100%;
   }
   98% {
-      left: 100%;
+    left: 100%;
   }
   99% {
-      left: 0;
+    left: 0;
   }
 }
 
 @keyframes tostart {
   75% {
-      left: 0;
+    left: 0;
   }
   95% {
-      left: -300%;
+    left: -300%;
   }
   98% {
-      left: -300%;
+    left: -300%;
   }
   99% {
-      left: 0;
+    left: 0;
   }
 }
 
 @keyframes snap {
   96% {
-      scroll-snap-align: center;
+    scroll-snap-align: center;
   }
   97% {
-      scroll-snap-align: none;
+    scroll-snap-align: none;
   }
   99% {
-      scroll-snap-align: none;
+    scroll-snap-align: none;
   }
   100% {
-      scroll-snap-align: center;
+    scroll-snap-align: center;
   }
 }
 
@@ -229,11 +231,10 @@ ol, li {
   padding: 0;
 }
 
-
-/* carrousel */
+/* Estilos para el carrusel */
 .productos-recomendados {
   width: 100%;
-  height: 300px; 
+  height: 300px;
   overflow: hidden;
   position: relative;
   margin-bottom: 50px;
@@ -242,20 +243,22 @@ ol, li {
 
 .carrusel {
   display: flex;
-  animation: carrusel 13s linear infinite; 
+  animation: carrusel 13s linear infinite;
   margin-left: 200px;
 }
 
 .carrusel img {
   width: 700px;
-  height: 300px;}
+  height: 300px;
+}
 
 @keyframes carrusel {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-2000px);   }
+    transform: translateX(-2000px);
+  }
 }
 
 input[type="text"] {
@@ -278,9 +281,6 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
-
-
-
 
 .product-list {
   display: flex;
@@ -313,45 +313,45 @@ button {
 }
 
 .product img {
-  max-width: 25%;
+  max-width: 40%; /* Aumenta el ancho de la imagen */
   height: auto;
 }
 
 .product h3 {
+  font-size: 1em; /* Reduce el tamaño del texto */
   margin-top: 10px;
-  font-size: 1.4em;
-  color: #333;
+  color: #333; /* Cambia el color del texto si es necesario */
 }
 
 .product a {
-  text-decoration: none; 
+  text-decoration: none;
 }
+
 .productos-aleatorios .product {
-  flex: 0 0 calc(25% - 20px);
-  max-width: calc(25% - 20px);
+  flex: 0 0 calc(24% - 20px);
+  max-width: calc(24% - 20px);
   margin: 10px;
 }
 
-
 .product .price {
-  display: none; 
+  display: none;
   font-size: 1.2em;
-  color: #000000; 
+  color: #000000;
   margin-top: 10px;
-  font-family: Arial, sans-serif; 
-  transition: opacity 0.8s; 
+  font-family: Arial, sans-serif;
+  transition: opacity 0.8s;
 }
 
 .product:hover .price {
-  display: block; 
-  opacity: 2; 
+  display: block;
+  opacity: 2;
 }
 
 .product a {
-  text-decoration: none; 
-  display: block; 
+  text-decoration: none;
+  display: block;
   position: relative;
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
@@ -363,6 +363,7 @@ button {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para el mensaje emergente */
 #popup-container {
   display: none;
   position: fixed;
@@ -383,4 +384,14 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.productos-aleatorios-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productos-aleatorios-container .product {
+  flex: 0 0 calc(24% - 20px);
+  max-width: calc(24% - 20px);
+  margin: 10px;
 }
