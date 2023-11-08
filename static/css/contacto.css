@@ -23,6 +23,8 @@ header {
     background-color: #094a8f;
     color: #fff;
     padding: 20px 0;
+    border-bottom-left-radius: 6vh;
+    border-bottom-right-radius: 6vh;
 }
 
 

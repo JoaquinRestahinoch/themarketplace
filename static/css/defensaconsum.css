@@ -17,6 +17,8 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    border-bottom-left-radius: 6vh;
+    border-bottom-right-radius: 6vh;
 }
 
 header h1 {
