@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/productos.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Nunito:wght@300&display=swap');
-  </style>
 <header>
     <nav class="navbar">
         <div class="container">
@@ -16,14 +14,14 @@
                 <img src="../static/img/logo2.png" alt="The MarketPlace Logo">
             </a>
             <ul class="menu">
-                <li> <a href="home.html">Home</a></li>
-                <li> <a href="iniciar.html">Iniciar sesión</a></li>
-                <li> <a href="categorias.html">Categorías</a></li>
+                <li> <a href="../home.html">Inicio</a></li>
+                <li> <a href="../productos.html">Productos</a></li>
+                <li> <a href="../categorias.html">Categorías</a></li>
+                <li><button class="carrito-button" id="verCarrito">Carrito</button></li>
             </ul>
         </div>
     </nav>
 </header>
-
 
 <body>
     <div class="cuerpo">
@@ -43,7 +41,6 @@
 
     <div id="ofertaPopup" class="popup">
         <div class="popup-content">
-            <button id="cerrarPopup" class="cerrar-popup">X</button>
             <h2>Realizar una oferta</h2>
             <p>Precio del producto: ${{ producto.price }}</p>
             <p>Cantidad disponible: {{ producto.quantity }}</p>
@@ -53,7 +50,7 @@
         </div>
     </div>
 
-    <button class="carrito-button" id="verCarrito">Carrito</button>
+
 
     <div id="carritoPopup" class="popup">
         <div class="popup-content">
@@ -208,34 +205,6 @@ function eliminarProducto(index) {
             });
         });
     </script>
-
-    <script>
-        document.getElementById('cerrarPopup').addEventListener('click', function() {
-            document.getElementById('ofertaPopup').style.display = 'none';
-        });
-    </script>
-
-
-
-<footer>
-    <footer>
-        <div class="container">
-            <div class="footer-menu">
-                <h3><a href="contacto.html">Contacto</a></h3>
-                <h3>|</h3>
-                <h3><a href="terycond.html">Términos y Condiciones</a></h3>
-                <h3>|</h3>
-                <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
-                <h3>|</h3>
-                <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
-            </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/TheMarketPlaceok/"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
-                <a href="https://twitter.com/TheMarketPlaceO"><img src="../static/img/twitter.png" alt="Twitter"></a>
-                <a href="https://www.instagram.com/themarketplace.ok/"><img src="../static/img/instagram.png" alt="Instagram" class="instagram"></a>
-            </div>
-    </footer>
-</footer>   
 
 
 </body>
