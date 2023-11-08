@@ -20,6 +20,15 @@ def redireccionar():
 def categorias():
     return render_template('categorias.html')
 
+
+@app.route('/inicio_sesion.html')
+def sesion():
+    return render_template('inicio_sesion.html')
+
+@app.route('/crear_cuenta.html')
+def crear():
+    return render_template('crear_cuenta.html')    
+
 @app.route('/category/<categoria>')
 def category(categoria):
     productos_categoria = [producto for producto in productos if producto['categoria'] == categoria]
