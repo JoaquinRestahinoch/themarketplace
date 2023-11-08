@@ -159,6 +159,7 @@ footer {
     display: flex;
     animation: carrusel 18s linear infinite; /* Ajusta la duración y el estilo de la animación según tus necesidades */
     margin-left: 200px;
+    
 }
 
 .carrusel img {
