@@ -362,7 +362,7 @@ button {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-/* Estilo para ocultar el mensaje emergente por defecto */
+
 #popup-container {
   display: none;
   position: fixed;

@@ -12,7 +12,7 @@
     </header>
 
     <div class="container">
-        <form action="https://script.google.com/macros/s/AKfycbxVlHSCjJ-fiLfi0XpvXn1kA8s0Dl1tWyrFLRwFsj14tFPH2_psyrz2AE-zQlzxWCS-/exec" method="post">
+        <form action="https://script.google.com/macros/s/AKfycbyX1h0MQD4xHZo0wr2e0AD4hRAgCCqbhKeTa4I_7l8sUXb57q6Zkvt0bY1ky2chYzAv/exec" method="post">
             <fieldset>
                 <legend>Iniciar Sesión</legend><br>
                 <label for="username">Nombre de usuario:</label>
@@ -23,9 +23,22 @@
 
                 <input type="hidden" name="operation" value="inicio_sesion">
 
-                <input type="submit" value="Iniciar sesión">
+                <a href="home.html"><input type="submit" value="Enviar" onclick="submitForm();"></a>
+
             </fieldset>
         </form>
     </div>
 </body>
+<script>
+    function submitForm() {
+        var form = document.querySelector("form");
+        form.submit();
+
+        setTimeout(function () {
+            var username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+            window.location.href = "home.html";
+        }, 1000);
+    }
+</script>
 </html>
