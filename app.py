@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from productos import productos
-from usuarios import usuarios_db, verificar_credenciales, crear_usuario
 import random
 
 app = Flask(__name__, template_folder='templates')
