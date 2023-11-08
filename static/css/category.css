@@ -3,23 +3,17 @@
     font-family: 'Nunito', sans-serif;
   }
   
-
-/* header */
 header {
   background-color: #094a8f;
   color: #fff;
   padding: 20px 0;
 }
 
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 .logo img {
   max-width: 300px;
@@ -44,8 +38,6 @@ header {
   font-size: 18px; 
 
 }
-/* Fin de header*/
-  
 
 body {
     font-family: Arial, sans-serif;
@@ -145,8 +137,6 @@ body h1{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* footer */
-
 footer {
   background-color: #333;
   color: #fff;
@@ -156,13 +146,13 @@ footer {
 }
 
 .footer-menu {
-  display: inline-block; /* Alinea los elementos en la misma fila */
+  display: inline-block; 
   margin: 10px 0;
 }
 
 .footer-menu h3 {
-  display: inline; /* Alinea los elementos del footer horizontalmente */
-  margin-right: 20px; /* Espacio entre elementos */
+  display: inline; 
+  margin-right: 20px; 
 }
 
 .footer-menu a {
@@ -176,4 +166,3 @@ footer {
   width: 30px;
 }
 
-/* fin footer */

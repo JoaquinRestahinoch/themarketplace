@@ -3,8 +3,6 @@
   font-family: 'Nunito', sans-serif;
 }
 
-/* header */
-
 header {
   background-color: #094a8f;
   color: #fff;
@@ -38,9 +36,6 @@ header {
   font-size: 18px;
 }
 
-/* Fin de header*/
-
-
 .hero {
   background-image: url('../static/img/hero-background.jpg');
   background-size: cover;
@@ -67,13 +62,13 @@ footer {
 }
 
 .footer-menu {
-  display: inline-block; /* Alinea los elementos en la misma fila */
+  display: inline-block; 
   margin: 10px 0;
 }
 
 .footer-menu h3 {
-  display: inline; /* Alinea los elementos del footer horizontalmente */
-  margin-right: 20px; /* Espacio entre elementos */
+  display: inline; 
+  margin-right: 20px; 
 }
 
 .footer-menu a {
@@ -86,9 +81,6 @@ footer {
   margin: 0 10px;
   width: 30px;
 }
-
-/* fin footer */
-
 
 @keyframes rotar {
   from {
@@ -234,7 +226,7 @@ ol, li {
 /* carrousel */
 .productos-recomendados {
   width: 100%;
-  height: 300px; /* Ajusta la altura según tus necesidades */
+  height: 300px; 
   overflow: hidden;
   position: relative;
   margin-bottom: 50px;
@@ -243,20 +235,18 @@ ol, li {
 
 .carrusel {
   display: flex;
-  animation: carrusel 13s linear infinite; /* Ajusta la duración y el estilo de la animación según tus necesidades */
+  animation: carrusel 13s linear infinite; 
   margin-left: 200px;
 }
 
 .carrusel img {
   width: 700px;
-  height: 300px; /* Ajusta el tamaño según tus necesidades */
-}
+  height: 300px;}
 
 @keyframes carrusel {
   0% {
       transform: translateX(0);
   }
   100% {
-      transform: translateX(-2000px); /* Ajusta el valor para que coincida con el ancho de la imagen */
-  }
+      transform: translateX(-2000px);   }
 }

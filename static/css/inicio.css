@@ -109,13 +109,13 @@ footer {
   }
   
   .footer-menu {
-    display: inline-block; /* Alinea los elementos en la misma fila */
+    display: inline-block; 
     margin: 10px 0;
   }
   
   .footer-menu h3 {
-    display: inline; /* Alinea los elementos del footer horizontalmente */
-    margin-right: 20px; /* Espacio entre elementos */
+    display: inline; 
+    margin-right: 20px;
   }
   
   .footer-menu a {
@@ -129,4 +129,3 @@ footer {
     width: 30px;
   }
   
-  /* fin footer */
