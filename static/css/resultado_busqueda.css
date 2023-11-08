@@ -140,34 +140,57 @@ main {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer .back-to-home {
-    position: absolute;
-    bottom: 10px;
-    display: block;
-    text-align: center;
-    width: 100%;
-}
-
-
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 40px 0;
-    clear: both; }
-
-.footer-menu h3 {
+    padding: 20px 0;
+    margin-top: 0px;
+  }
+  
+  .footer-menu {
+    display: inline-block; 
     margin: 10px 0;
-}
-
-.footer-menu a {
+  }
+  
+  .footer-menu h3 {
+    font-weight: bold;
+    display: inline; 
+    margin-right: 20px; 
+  }
+  
+  .footer-menu a {
+    font-weight: bold;
     text-decoration: none;
     color: #fff;
     font-size: 25px;
-}
-
-.social-links a img {
+  }
+  
+  .social-links a img {
     margin: 0 10px;
     width: 30px;
-}
+  }
+  
+  
+  input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #094a8f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  

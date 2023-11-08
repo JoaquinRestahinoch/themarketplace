@@ -55,32 +55,32 @@ a {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 0px;
-  }
-  
-  .footer-menu {
-    display: inline-block; /* Alinea los elementos en la misma fila */
-    margin: 10px 0;
-  }
-  
-  .footer-menu h3 {
-    display: inline; /* Alinea los elementos del footer horizontalmente */
-    margin-right: 20px; /* Espacio entre elementos */
-  }
-  
-  .footer-menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-  }
-  
-  .social-links a img {
-    margin: 0 10px;
-    width: 30px;
-    background-color: none;
-  }
-  
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 0px;
+}
+
+.footer-menu {
+  display: inline-block; 
+  margin: 10px 0;
+}
+
+.footer-menu h3 {
+  font-weight: bold;
+  display: inline; 
+  margin-right: 20px; 
+}
+
+.footer-menu a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+.social-links a img {
+  margin: 0 10px;
+  width: 30px;
+}

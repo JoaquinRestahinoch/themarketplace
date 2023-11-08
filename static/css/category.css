@@ -143,8 +143,8 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 40px 0;
-  margin-top: 150px;
+  padding: 20px 0;
+  margin-top: 0px;
 }
 
 .footer-menu {
@@ -153,11 +153,13 @@ footer {
 }
 
 .footer-menu h3 {
+  font-weight: bold;
   display: inline; 
   margin-right: 20px; 
 }
 
 .footer-menu a {
+  font-weight: bold;
   text-decoration: none;
   color: #fff;
   font-size: 25px;
@@ -167,4 +169,3 @@ footer {
   margin: 0 10px;
   width: 30px;
 }
-

@@ -215,16 +215,18 @@ footer {
   }
   
   .footer-menu {
-    display: inline-block; /* Alinea los elementos en la misma fila */
+    display: inline-block; 
     margin: 10px 0;
   }
   
   .footer-menu h3 {
-    display: inline; /* Alinea los elementos del footer horizontalmente */
-    margin-right: 20px; /* Espacio entre elementos */
+    font-weight: bold;
+    display: inline; 
+    margin-right: 20px; 
   }
   
   .footer-menu a {
+    font-weight: bold;
     text-decoration: none;
     color: #fff;
     font-size: 25px;
@@ -233,9 +235,8 @@ footer {
   .social-links a img {
     margin: 0 10px;
     width: 30px;
-    background-color: none;
   }
-
+  
   .cerrar-popup {
     position: absolute;
     top: 10px;

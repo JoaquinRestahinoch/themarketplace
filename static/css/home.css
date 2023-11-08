@@ -29,6 +29,7 @@ header {
 .menu li {
   display: inline;
   margin-right: 50px;
+  font-weight: bold;
 }
 
 .menu li a {
@@ -51,6 +52,7 @@ header {
 .hero h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 /* footer */
@@ -69,11 +71,13 @@ footer {
 }
 
 .footer-menu h3 {
+  font-weight: bold;
   display: inline; 
   margin-right: 20px; 
 }
 
 .footer-menu a {
+  font-weight: bold;
   text-decoration: none;
   color: #fff;
   font-size: 25px;
@@ -219,6 +223,7 @@ body {
 }
 
 ol, li {
+  font-weight: bold;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -252,3 +257,25 @@ ol, li {
   100% {
       transform: translateX(-2000px);   }
 }
+
+input[type="text"] {
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #094a8f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+

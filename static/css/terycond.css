@@ -53,26 +53,38 @@ header {
     font-size: 18px; 
 
 }
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 40px 0;
-    clear: both; 
-display: block;}
-
-
-.footer-menu a {
+    padding: 20px 0;
+    margin-top: 0px;
+  }
+  
+  .footer-menu {
+    display: inline-block; 
+    margin: 10px 0;
+  }
+  
+  .footer-menu h3 {
+    font-weight: bold;
+    display: inline; 
+    margin-right: 20px; 
+  }
+  
+  .footer-menu a {
+    font-weight: bold;
     text-decoration: none;
     color: #fff;
     font-size: 25px;
-}
-
-.social-links a img {
+  }
+  
+  .social-links a img {
     margin: 0 10px;
     width: 30px;
-}
-
+  }
+  
 h1 {
     font-size: 36px;
     color: #094a8f;
