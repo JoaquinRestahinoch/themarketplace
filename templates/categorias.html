@@ -11,7 +11,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Nunito:wght@300&display=swap');
 </style>
 <body>
-    
     <header>
         <nav class="navbar">
             <div class="container">
@@ -19,17 +18,16 @@
                     <img src="../static/img/logo.png" alt="The MarketPlace Logo">
                 </a>
                 <ul class="menu">
-                    <li> <a href="home.html">Home</a></li>
-                    <li> <a href="iniciar.html">Iniciar sesión</a></li>
-                    <li> <a href="categorias.html">Categorías</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="iniciar.html">Iniciar sesión</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-
-        <main>
+    <main>
+        <div class="category-row">
             <div class="category">
                 <a class="link" href="/category/deportes">
                     <div class="category-bg category-deportes"></div>
@@ -42,6 +40,8 @@
                     <h2>Moda</h2>
                 </a>
             </div>
+        </div>
+        <div class="centered-categories">
             <div class="category">
                 <a class="link" href="/category/electrodomesticos">
                     <div class="category-bg category-electrodomesticos"></div>
@@ -54,47 +54,34 @@
                     <h2>Tecnología</h2>
                 </a>
             </div>
-            <div class="category">
-                <a class="link" href="/category/herramientas">
-                    <div class="category-bg category-herramientas"></div>
-                    <h2>Herramientas</h2>
-                </a>
-            </div>
-            
-        </main>
-    </div>
-
-    <div class="productos-recomendados">
-        <div class="carrusel">
-            <img src="../static/img/bannerlogo.png" alt="logo">
-            <img src="../static/img/bannerdeportes.png" alt="Producto 1">
-            <img src="../static/img/bannermoda.png" alt="Producto 2">
-            <img src="../static/img/bannertecnologia.png" alt="Producto 3">
-            <img src="../static/img/bannerelectrodomesticos.png" alt="Producto ">
-            <img src="../static/img/bannerherramientas.png" alt="Producto 5">
-            
         </div>
-    </div>
+        <div class="category">
+            <a class="link" href="/category/herramientas">
+                <div class="category-bg category-herramientas"></div>
+                <h2>Herramientas</h2>
+            </a>
+        </div>
+    </main>
+    
     
 
     <footer>
-        <footer>
-            <div class="container">
-                <div class="footer-menu">
-                    <h3><a href="contacto.html">Contacto</a></h3>
-                    <h3>|</h3>
-                    <h3><a href="terycond.html">Términos y Condiciones</a></h3>
-                    <h3>|</h3>
-                    <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
-                    <h3>|</h3>
-                    <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/TheMarketPlace/"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/TheMarketPlaceO"><img src="../static/img/twitter.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/marketplacecollective/"><img src="../static/img/instagram.png" alt="Instagram" class="instagram"></a>
-                </div>            </div>
-        </footer>
+        <div class="container">
+            <div class="footer-menu">
+                <h3><a href="contacto.html">Contacto</a></h3>
+                <h3>|</h3>
+                <h3><a href="terycond.html">Términos y Condiciones</a></h3>
+                <h3>|</h3>
+                <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
+                <h3>|</h3>
+                <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/TheMarketPlace/"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
+                <a href="https://twitter.com/TheMarketPlaceO"><img src="../static/img/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/marketplacecollective/"><img src="../static/img/instagram.png" alt="Instagram" class="instagram"></a>
+            </div>
+        </div>
     </footer>   
 
     <script src="static/js/app3.js"></script>
