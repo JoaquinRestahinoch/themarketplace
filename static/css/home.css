@@ -56,16 +56,24 @@ header {
   margin-bottom: 20px;
 }
 
+/* footer */
+
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 40px 0;
-  margin-top: -200px;
+  padding: 20px 0;
+  margin-top: 0px;
+}
+
+.footer-menu {
+  display: inline-block; /* Alinea los elementos en la misma fila */
+  margin: 10px 0;
 }
 
 .footer-menu h3 {
-  margin: 10px 0;
+  display: inline; /* Alinea los elementos del footer horizontalmente */
+  margin-right: 20px; /* Espacio entre elementos */
 }
 
 .footer-menu a {
@@ -78,6 +86,9 @@ footer {
   margin: 0 10px;
   width: 30px;
 }
+
+/* fin footer */
+
 
 @keyframes rotar {
   from {

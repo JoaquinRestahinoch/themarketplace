@@ -144,25 +144,36 @@ body h1{
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* footer */
+
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-    clear: both;
-  }
-  
-  .footer-menu h3 {
-    margin: 10px 0;
-  }
-  
-  .footer-menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-  }
-  
-  .social-links a img {
-    margin: 0 10px;
-    width: 30px;
-  }
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 150px;
+}
+
+.footer-menu {
+  display: inline-block; /* Alinea los elementos en la misma fila */
+  margin: 10px 0;
+}
+
+.footer-menu h3 {
+  display: inline; /* Alinea los elementos del footer horizontalmente */
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+.social-links a img {
+  margin: 0 10px;
+  width: 30px;
+}
+
+/* fin footer */

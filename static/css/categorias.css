@@ -124,31 +124,39 @@ h2 {
     margin-top: 100px;
 }
 
+/* footer */
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 2px 0;
-    margin-top: 50px;    
-}
-
-
-.footer-menu h3 {
+    padding: 20px 0;
+    margin-top: 0px;
+  }
+  
+  .footer-menu {
+    display: inline-block; /* Alinea los elementos en la misma fila */
     margin: 10px 0;
-}
-
-
-.footer-menu a {
+  }
+  
+  .footer-menu h3 {
+    display: inline; /* Alinea los elementos del footer horizontalmente */
+    margin-right: 20px; /* Espacio entre elementos */
+  }
+  
+  .footer-menu a {
     text-decoration: none;
     color: #fff;
     font-size: 25px;
-}
-
-
-.social-links a img{
+  }
+  
+  .social-links a img {
     margin: 0 10px;
     width: 30px;
-}
+  }
+  
+  /* fin footer */
+
 
 /* carrousel */
 .productos-recomendados {
