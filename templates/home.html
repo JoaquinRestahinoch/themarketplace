@@ -156,12 +156,10 @@
     var closePopup = document.getElementById('close-popup');
 
     if (username) {
-        // Si se encuentra un nombre de usuario en localStorage, muestra el mensaje emergente
         welcomePopup.textContent = 'Bienvenido, ' + username;
         popupContainer.style.display = 'block';
     }
 
-    // Agrega un evento al botón "Cerrar" para ocultar el mensaje emergente
     closePopup.addEventListener('click', function() {
         popupContainer.style.display = 'none';
     });
