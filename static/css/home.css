@@ -19,7 +19,7 @@ header {
 
 .logo img {
   max-width: 300px;
-  margin-left: -180px;
+  margin-left: 50px;
 }
 
 .menu {
@@ -28,7 +28,7 @@ header {
 
 .menu li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .menu li a {

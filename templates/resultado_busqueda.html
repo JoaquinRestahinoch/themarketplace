@@ -10,12 +10,20 @@
   </style>
 <body>
     <header>
-        <div class="logo-container">
-            <a href="home.html" class="logo">
-                <img src="../static/img/logo.png" alt="Logo de TheMarketPlace">
-            </a>
-        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="home.html" class="logo">
+                    <img src="../static/img/logo.png" alt="The MarketPlace Logo">
+                </a>
+                <ul class="menu">
+                    <li> <a href="home.html">Home</a></li>
+                    <li> <a href="iniciar.html">Iniciar sesión</a></li>
+                    <li> <a href="categorias.html">Categorías</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+
     <main>
         <div class="search-bar">
             <form action="/search" method="get">
@@ -38,7 +46,7 @@
             {% endfor %}
         </ul>
     </main>
-    <a href="home.html" class="back-button">Volver al inicio</a>
+  
 
     <footer>
         <div class="container">

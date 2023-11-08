@@ -100,58 +100,62 @@ body img {
         border-width: 2px 2px 2px 2px;
     }
 
-button {
-    background-color: #094a8f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .carrito-button {
+        background-color: #ffffff;
+        color: #094a8f;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 100px;
+        margin-top: 55px;
+    }
 
-button:hover {
-    background-color: #094a8f;
-}
+    .carrito-button:hover {
+        background-color: #dfdfdf;
+    }
 
 
-/* Estilos para el encabezado (header) */
 header {
     background-color: #094a8f;
     color: #fff;
     padding: 20px 0;
 }
 
-/* Estilos para la barra de navegación (navbar) */
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Estilos para el logotipo (logo) */
+
+
 .logo img {
     max-width: 300px;
-    margin-left: 100px;
-    margin-right: 0;
-}
+    margin-left: 50px;
+  }
 
-/* Estilos para el menú de navegación (menu) */
 .menu {
     list-style: none;
 }
 
-/* Estilos para los elementos del menú (menu items) */
+
 .menu li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
-/* Estilos para los enlaces del menú (menu links) */
+
 .menu li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 18px; 
+
 }
 
 .faq-section {

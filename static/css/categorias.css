@@ -22,7 +22,7 @@ header {
 
 .logo img {
     max-width: 300px;
-    margin-left: -180px;
+    margin-left: 50px;
   }
 
 .menu {
@@ -32,8 +32,7 @@ header {
 
 .menu li {
     display: inline;
-    margin-right: 20px;
-    
+    margin-right: 50px;
 }
 
 
@@ -154,30 +153,31 @@ footer {
 /* carrousel */
 .productos-recomendados {
     width: 100%;
-    height: 550px; /* Ajusta la altura según tus necesidades */
+    height: 300px; /* Ajusta la altura según tus necesidades */
     overflow: hidden;
     position: relative;
-}
-
-.carrusel {
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  
+  .carrusel {
     display: flex;
-    animation: carrusel 18s linear infinite; /* Ajusta la duración y el estilo de la animación según tus necesidades */
+    animation: carrusel 13s linear infinite; /* Ajusta la duración y el estilo de la animación según tus necesidades */
     margin-left: 200px;
-    
-}
+  }
+  
+  .carrusel img {
+    width: 700px;
+    height: 300px; /* Ajusta el tamaño según tus necesidades */
+  }
 
-.carrusel img {
-    width: 1050px;
-    height: 550px; /* Ajusta el tamaño según tus necesidades */
-}
-
-@keyframes carrusel {
+  @keyframes carrusel {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-4500px); /* Ajusta el valor para que coincida con el ancho de la imagen */
+        transform: translateX(-2000px); /* Ajusta el valor para que coincida con el ancho de la imagen */
     }
-}
+  }
 
 
