@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from productos import productos
 from usuarios import usuarios_db, verificar_credenciales, crear_usuario
+import random
 
 app = Flask(__name__, template_folder='templates')
 
@@ -8,9 +9,12 @@ app = Flask(__name__, template_folder='templates')
 def Index():
     return render_template('inicio.html')
 
+
 @app.route('/home.html')
 def home():
-    return render_template('home.html')
+    productos_aleatorios = random.sample(productos, 8)  
+    return render_template('home.html', productos_aleatorios=productos_aleatorios)
+
 
 @app.route('/redireccionar', methods=['POST'])
 def redireccionar():
@@ -104,6 +108,8 @@ def get_update_or_delete_product(product_id):
             return jsonify({'error': 'Producto no encontrado'}), 404
         del productos[product_id]
         return jsonify({'message': 'Producto eliminado correctamente'})
+    
+
     
 
 @app.route('/search', methods=['GET'])

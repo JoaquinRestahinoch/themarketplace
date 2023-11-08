@@ -27,9 +27,8 @@
     </header>
 
 
-    <h1>Resumen de Compra</h1>
-
     <div id="resumen-carrito">
+        <h2 id="mensaje-usuario" style="text-align: center; font-size: 24px; color: #333; padding: 20px;"></h2>
         <table>
             <thead>
                 <tr>
@@ -42,6 +41,7 @@
             </tbody>
         </table>
     </div>
+    
 
     <h2>Total de la Compra: <span id="total-compra">$0</span></h2>
 
@@ -86,5 +86,20 @@
         </div>
     </footer>
 
-</body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Verificar si el nombre de usuario está en el localStorage
+            var username = localStorage.getItem('username');
+        
+            if (username) {
+                // Si se encuentra en localStorage, mostrar el mensaje personalizado
+                var message = username + ", este es tu resumen de compra:";
+                var messageElement = document.getElementById('mensaje-usuario');
+                messageElement.textContent = message;
+            }
+        });
+        </script>
+        
+        
+    
 </html>

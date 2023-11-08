@@ -11,20 +11,30 @@
         <img src="../static/img/logo2.png" alt="Logo"> 
 
     <div class="container">
-        <form action="https://script.google.com/macros/s/AKfycbwYYPs34xFzFNBhTbGyCaAeTQPVPv4U0n3QNYFAE31tvpClKiTwEglAlDMzFdld95-p/exec" method="post">
+        <form action="https://script.google.com/macros/s/AKfycbyX1h0MQD4xHZo0wr2e0AD4hRAgCCqbhKeTa4I_7l8sUXb57q6Zkvt0bY1ky2chYzAv/exec" method="post">
             <fieldset>
                 <legend>Creá tu cuenta</legend> <br>
                 <label for="username"> Usuario:</label>
                 <input name="username" type="text" tabindex="1" placeholder="Ingrese su nombre"><br><br>
-        
+
                 <label for="password"> Contraseña:</label>
                 <input name="password" type="text" tabindex="2" placeholder="Ingrese su contraseña"><br><br>
-        
-    <input type="submit" value="Enviar">
-            </fieldset>             
-        </form>
-        
-    </div>
 
+                <input type="hidden" name="operation" value="registro">
+
+                <a href="inicio_sesion.html"><input type="submit" value="Enviar" onclick="submitForm();"></a>
+            </fieldset>
+        </form>
+    </div>
 </body>
+<script>
+    function submitForm() {
+        var form = document.querySelector("form");
+        form.submit(); 
+
+        setTimeout(function () {
+            window.location.href = "inicio_sesion.html";
+        }, 1000);
+    }
+</script>
 </html>

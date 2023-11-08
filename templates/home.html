@@ -65,7 +65,21 @@
         </div>
     </div>
     
-    
+    <div class="productos-aleatorios">
+        <h2>Productos Aleatorios</h2>
+        <div class="productos-aleatorios-container">
+            {% for producto in productos_aleatorios %}
+            <li class="product">
+                <a href="/productos/{{ producto.id }}">
+                    <img src="{{ producto.foto }}">
+                    <h3>{{ producto.name }}</h3>
+                    <p class="price">${{ producto.price }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
+      
 <div class="slider">
     <div class="slide-track">
         <div class="slide">
@@ -106,6 +120,12 @@
         </div>
     </div>
 </div>
+<div id="popup-container">
+    <div id="popup-box">
+        <p id="welcome-popup"></p>
+        <button id="close-popup">Cerrar</button>
+    </div>
+</div>
 <footer>
     <div class="container">
         <div class="footer-menu">
@@ -128,7 +148,23 @@
 
 
 
+<script>
+    var username = localStorage.getItem('username');
+    var popupContainer = document.getElementById('popup-container');
+    var welcomePopup = document.getElementById('welcome-popup');
+    var closePopup = document.getElementById('close-popup');
 
+    if (username) {
+        // Si se encuentra un nombre de usuario en localStorage, muestra el mensaje emergente
+        welcomePopup.textContent = 'Bienvenido, ' + username;
+        popupContainer.style.display = 'block';
+    }
+
+    // Agrega un evento al botón "Cerrar" para ocultar el mensaje emergente
+    closePopup.addEventListener('click', function() {
+        popupContainer.style.display = 'none';
+    });
+</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="static/js/home.js"></script>
 </body>

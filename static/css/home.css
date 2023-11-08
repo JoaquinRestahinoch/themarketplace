@@ -279,3 +279,108 @@ button {
   font-weight: bold;
 }
 
+
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  max-width: 25%;
+  height: auto;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.product a {
+  text-decoration: none; 
+}
+.productos-aleatorios .product {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  margin: 10px;
+}
+
+
+.product .price {
+  display: none; 
+  font-size: 1.2em;
+  color: #000000; 
+  margin-top: 10px;
+  font-family: Arial, sans-serif; 
+  transition: opacity 0.8s; 
+}
+
+.product:hover .price {
+  display: block; 
+  opacity: 2; 
+}
+
+.product a {
+  text-decoration: none; 
+  display: block; 
+  position: relative;
+  border: 1px solid #ddd; 
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.product a:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Estilo para ocultar el mensaje emergente por defecto */
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+#popup-box {
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
