@@ -55,7 +55,6 @@ main {
     justify-content: center;
 }
 
-/* Estilos de las categorías */
 .category {
     width: 200px;
     height: 200px;
@@ -68,7 +67,7 @@ main {
     position: relative;
     align-items: center;
     display: flex;
-    justify-content: space-between; /* Para alinear el contenido verticalmente */
+    justify-content: space-between; 
 }
 
 .category-bg.category-deportes {
@@ -93,8 +92,8 @@ main {
 }
 
 .category:hover {
-    transform: scale(1.1); /* Efecto de aumento al hacer hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+    transform: scale(1.1); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 .category a.link {
@@ -126,7 +125,6 @@ h2 {
     margin-top: 100px;
 }
 
-/* footer */
 
 footer {
     background-color: #333;
@@ -134,22 +132,25 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 0px;
+    font-weight: bold;
   }
   
   .footer-menu {
-    display: inline-block; /* Alinea los elementos en la misma fila */
+    display: inline-block; 
     margin: 10px 0;
+    font-weight: bold;
   }
   
   .footer-menu h3 {
-    display: inline; /* Alinea los elementos del footer horizontalmente */
-    margin-right: 20px; /* Espacio entre elementos */
+    display: inline; 
+    margin-right: 20px; 
+    font-weight: bold;
   }
-  
   .footer-menu a {
     text-decoration: none;
     color: #fff;
     font-size: 25px;
+    font-weight: bold;
   }
   
   .social-links a img {
@@ -157,14 +158,13 @@ footer {
     width: 30px;
     background-color: none;
   }
-  
-  /* fin footer */
 
 
-/* carrousel */
+
+
 .productos-recomendados {
     width: 100%;
-    height: 300px; /* Ajusta la altura según tus necesidades */
+    height: 300px; 
     overflow: hidden;
     position: relative;
     margin-bottom: 50px;
@@ -173,13 +173,13 @@ footer {
   
   .carrusel {
     display: flex;
-    animation: carrusel 13s linear infinite; /* Ajusta la duración y el estilo de la animación según tus necesidades */
+    animation: carrusel 13s linear infinite; 
     margin-left: 200px;
   }
   
   .carrusel img {
     width: 700px;
-    height: 300px; /* Ajusta el tamaño según tus necesidades */
+    height: 300px; 
   }
 
   @keyframes carrusel {
@@ -187,7 +187,7 @@ footer {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-2000px); /* Ajusta el valor para que coincida con el ancho de la imagen */
+        transform: translateX(-2000px); 
     }
   }
 
