@@ -1,82 +1,76 @@
-*{
+* {
     font-family: 'Hind Madurai', sans-serif;
     font-family: 'Nunito', sans-serif;
-  }
-  
-
-
-
-
+}
 
 .popup {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.7);
-                z-index: 1;
-            }
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
 
-            .popup-content {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: white;
-                padding: 20px;
-                text-align: center;
-                background-color: #fff;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            }
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-            .carrito-button {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background-color: #094a8f;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 10px;
-                cursor: pointer;
-            }
+.carrito-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #094a8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-            #carrito-list {
-                list-style: none;
-                padding: 0;
-            }
+#carrito-list {
+    list-style: none;
+    padding: 0;
+}
 
-            #carrito-list li {
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
-            }
+#carrito-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-            #carrito-list img {
-                max-width: 50px;
-                margin-right: 10px;
-            }
+#carrito-list img {
+    max-width: 50px;
+    margin-right: 10px;
+}
 
-            .carrito-buttons {
-                margin-top: 20px;
-            }
+.carrito-buttons {
+    margin-top: 20px;
+}
 
-            .carrito-button-item {
-                margin: 10px;
-            }
-
+.carrito-button-item {
+    margin: 10px;
+}
 
 body {
     background-color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;  
+    padding: 0;
 }
 
-body h1{
+body h1 {
     font-size: 30px;
 }
 
@@ -84,52 +78,45 @@ body img {
     max-height: 300px;
 }
 
-.cuerpo{
+.cuerpo {
     margin-left: 20px;
     margin-top: 60px;
 }
 
-    .cuerpo img{
-        margin-left: 50px;
-        margin-top: 70px;
-    }
+.cuerpo img {
+    margin-left: 50px;
+    margin-top: 70px;
+}
 
-    .cuerpo2{
-        margin-top: -300px;
-        margin-left: 400px;
-        border: 1px solid #ddd;
-        border-radius: 50px;
-        padding: 30px;
-        border-width: 2px 2px 2px 2px;
-    }
+.cuerpo2 {
+    margin-top: -300px;
+    margin-left: 400px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 30px;
+    border-width: 2px 2px 2px 2px;
+}
 
-    .carrito-button {
-        background-color: #ffffff;
-        color: #094a8f;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        font-weight: bold;
-        margin-right: 100px;
-        margin-top: 55px;
-    }
+.carrito-button {
+    background-color: #ffffff;
+    color: #094a8f;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-    .carrito-button:hover {
-        background-color: #dfdfdf;
-    }
-
+.carrito-button:hover {
+    background-color: #dfdfdf;
+}
 
 header {
-    background-color: #094a8f;
+    background-color: #004AAD;
     color: #fff;
     padding: 20px 0;
     border-bottom-left-radius: 6vh;
     border-bottom-right-radius: 6vh;
 }
-
-
 
 .navbar {
     display: flex;
@@ -137,30 +124,25 @@ header {
     align-items: center;
 }
 
-
-
 .logo img {
     max-width: 300px;
     margin-left: 50px;
-  }
+}
 
 .menu {
     list-style: none;
+    display: flex; /* Añadir display: flex para alinear los elementos en línea */
 }
-
 
 .menu li {
-    display: inline;
-    margin-right: 50px;
+    margin-right: 20px; /* Reducir el margen entre elementos */
 }
-
 
 .menu li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 18px; 
-
+    font-size: 18px;
 }
 
 .faq-section {
@@ -195,7 +177,7 @@ header {
     font-weight: bold;
     width: 100%;
     text-align: left;
-    font-size:medium;
+    font-size: medium;
 }
 
 .answer {
@@ -216,32 +198,32 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 0px;
-  }
-  
-  .footer-menu {
-    display: inline-block; 
+}
+
+.footer-menu {
+    display: inline-block;
     margin: 10px 0;
-  }
-  
-  .footer-menu h3 {
+}
+
+.footer-menu h3 {
     font-weight: bold;
-    display: inline; 
-    margin-right: 20px; 
-  }
-  
-  .footer-menu a {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-menu a {
     font-weight: bold;
     text-decoration: none;
     color: #fff;
     font-size: 25px;
-  }
-  
-  .social-links a img {
+}
+
+.social-links a img {
     margin: 0 10px;
     width: 30px;
-  }
-  
-  .cerrar-popup {
+}
+
+.cerrar-popup {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -254,63 +236,11 @@ footer {
     font-size: 20px;
     line-height: 30px;
     cursor: pointer;
-    color: #333; /* Color del texto */
+    color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Estilo al pasar el mouse sobre el botón de cierre */
 .cerrar-popup:hover {
-    background-color: #ccc; /* Cambiar el fondo al pasar el mouse */
-    color: #000; /* Cambiar el color del texto al pasar el mouse */
+    background-color: #ccc;
+    color: #000;
 }
-
-/*header */
-
-
-header {
-    background-color: #004AAD;
-    color: #fff;
-    padding: 20px 0;
-    border-bottom-left-radius: 6vh;
-    border-bottom-right-radius: 6vh;
-}
-
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.logo img {
-    max-width: 300px;
-    margin-left: 50px;
-  }
-
-.menu {
-    list-style: none;
-}
-
-
-.menu li {
-    display: inline;
-    margin-right: 50px;
-}
-
-
-.menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px; 
-
-}
-
-.carrito-button{
-    margin-top: -5px;
-}
-
-/* fin header */
