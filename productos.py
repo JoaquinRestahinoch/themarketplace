@@ -37,7 +37,7 @@ productos = [
     {'id': 36, 'name': 'Mochila de senderismo', 'categoria': 'deportes', 'price': 80000, 'quantity': 6, 'descripcion': 'Una mochila de senderismo resistente para tus aventuras en la naturaleza.', 'foto': '/static/img/prod36.png'},
     {'id': 37, 'name': 'Vestido de verano para mujeres', 'categoria': 'moda', 'price': 80000, 'quantity': 7, 'descripcion': 'Un vestido de verano ligero y colorido para mujeres.', 'foto': '/static/img/prod37.png'},
     {'id': 38, 'name': 'Herramientas de carpintería', 'categoria': 'herramientas', 'price': 70000, 'quantity': 5, 'descripcion': 'Un conjunto de herramientas de carpintería esenciales para tus proyectos de bricolaje.', 'foto': '/static/img/prod38.png'},
-    {'id': 39, 'name': 'Zapatillas de moda para hombres', 'categoria': 'indumentaria', 'price': 60000, 'quantity': 8, 'descripcion': 'Zapatillas de moda para hombres que combinan comodidad y estilo.', 'foto': '/static/img/prod39.png'},
+    {'id': 39, 'name': 'Pelota de tenis Dunlop', 'categoria': 'deportes', 'price': 40000, 'quantity': 8, 'descripcion': 'Una pelota de tenis Dunlop de calidad para tus partidos en la pista.', 'foto': '/static/img/prod67.png'},
     {'id': 40, 'name': 'Set de herramientas de fontanería', 'categoria': 'herramientas', 'price': 60000, 'quantity': 5, 'descripcion': 'Un set de herramientas de fontanería de alta calidad para reparaciones eficientes.', 'foto': '/static/img/prod40.png'},
     {'id': 41, 'name': 'Reproductor de música Sony', 'categoria': 'tecnologia', 'price': 40000, 'quantity': 10, 'descripcion': 'Un reproductor de música Sony para escuchar tus canciones favoritas.', 'foto': '/static/img/prod41.png'},
     {'id': 42, 'name': 'Heladera de acero inoxidable', 'categoria': 'electrodomesticos', 'price': 800000, 'quantity': 3, 'descripcion': 'Una heladera de acero inoxidable de alta calidad para mantener tus alimentos frescos.', 'foto': '/static/img/prod42.png'},
@@ -53,7 +53,7 @@ productos = [
     {'id': 52, 'name': 'Bicicleta de carretera Cannondale', 'categoria': 'deportes', 'price': 1800000, 'quantity': 3, 'descripcion': 'Una bicicleta de carretera Cannondale para ciclistas apasionados y competidores.', 'foto': '/static/img/prod52.png'},
     {'id': 53, 'name': 'Vestido de novia deslumbrante', 'categoria': 'moda', 'price': 300000, 'quantity': 4, 'descripcion': 'Un vestido de novia deslumbrante para tu día especial.', 'foto': '/static/img/prod53.png'},
     {'id': 54, 'name': 'Juego de llaves de tubo', 'categoria': 'herramientas', 'price': 70000, 'quantity': 6, 'descripcion': 'Un juego completo de llaves de tubo para trabajos de fontanería y reparaciones.', 'foto': '/static/img/prod54.png'},
-    {'id': 55, 'name': 'Vestido de verano para hombres', 'categoria': 'indumentaria', 'price': 85000, 'quantity': 5, 'descripcion': 'Un vestido de verano ligero y cómodo para hombres.', 'foto': '/static/img/prod5.png5'},
+    {'id': 55, 'name': 'Bolso de viaje elegante', 'categoria': 'moda', 'price': 120000, 'quantity': 6, 'descripcion': 'Un bolso de viaje elegante y espacioso para tus aventuras.', 'foto': '/static/img/prod68.png'},
     {'id': 56, 'name': 'Horno eléctrico KitchenAid', 'categoria': 'electrodomesticos', 'price': 120000, 'quantity': 3, 'descripcion': 'Un horno eléctrico KitchenAid para hornear y asar tus platos favoritos.', 'foto': '/static/img/prod56.png'},
     {'id': 57, 'name': 'Balón de baloncesto Spalding', 'categoria': 'deportes', 'price': 45000, 'quantity': 8, 'descripcion': 'Un balón de baloncesto Spalding de alta calidad para tus partidos en la cancha.', 'foto': '/static/img/prod57.png'},
     {'id': 58, 'name': 'Bolso de cuero para hombres', 'categoria': 'moda', 'price': 150000, 'quantity': 7, 'descripcion': 'Un bolso de cuero para hombres con un diseño elegante y funcionalidad.', 'foto': '/static/img/prod58.png'},
@@ -65,7 +65,6 @@ productos = [
     {'id': 64, 'name': 'Set de herramientas de electricista', 'categoria': 'herramientas', 'price': 70000, 'quantity': 2, 'descripcion': 'Un set de herramientas de electricista con aislamiento para trabajos seguros.', 'foto': '/static/img/prod64.png'},
     {'id': 65, 'name': 'Chaqueta de invierno para hombres', 'categoria': 'indumentaria', 'price': 130000, 'quantity': 4, 'descripcion': 'Una chaqueta de invierno cálida y resistente para hombres.', 'foto': '/static/img/prod65.png'},
     {'id': 66, 'name': 'Robot de cocina KitchenAid', 'categoria': 'electrodomesticos', 'price': 180000, 'quantity': 3, 'descripcion': 'Un robot de cocina KitchenAid para preparar una amplia variedad de platos.', 'foto': '/static/img/prod66.png'},
-    {'id': 67, 'name': 'Pelota de tenis Dunlop', 'categoria': 'deportes', 'price': 40000, 'quantity': 8, 'descripcion': 'Una pelota de tenis Dunlop de calidad para tus partidos en la pista.', 'foto': '/static/img/prod67.png'},
-    {'id': 68, 'name': 'Bolso de viaje elegante', 'categoria': 'moda', 'price': 120000, 'quantity': 6, 'descripcion': 'Un bolso de viaje elegante y espacioso para tus aventuras.', 'foto': '/static/img/prod68.png'},
+    
     ]
 
