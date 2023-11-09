@@ -1,135 +1,142 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Hind Madurai', sans-serif;
-    font-family: 'Nunito', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Nunito', sans-serif;
+}
 
-      
-  }
-  
-  
-  body {
-      font-family: Arial, sans-serif;
-  }
-  
-  
-  header {
-      background-color: #004AAD;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      border-bottom-left-radius: 6vh;
-    border-bottom-right-radius: 6vh;
-  }
-  
-  .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .logo {
-      max-width: 450px;
-      display: block;
-  }
-  
-  
-  .white-section {
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 20px;
-      width: 80%;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      margin: 20px auto;
-  }
-  
-  h2 {
-      color: #094a8f;
-      font-size: 30px;
-      font-weight: bold;
-  }
-  
-  .custom-select {
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
-  }
-  
-  select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 18px;
-      
-  }
-  
-  .select-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-  }
-  
-  .flag {
-      max-width: 150px;
-      border: 2px solid #094a8f; 
-      border-radius: 5px;
-      display: none;
-      margin: 10px auto;
-  }
-  
-  
-  .seleccionar-button {
-      background-color: #094a8f;
-      color: #fff;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      display: block;
-      margin: 20px auto;
-      font-size: 18px;
-  }
-  
-  .seleccionar-button:hover {
-      background-color: #36bd0d;
-  }
-  
-  
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  background-color: #004AAD;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-bottom-left-radius: 6vh;
+  border-bottom-right-radius: 6vh;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 450px;
+  display: block;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.white-section {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+h2 {
+  color: #094a8f;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.custom-select {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.flag {
+  max-width: 150px;
+  border: 2px solid #094a8f;
+  border-radius: 5px;
+  display: none;
+  margin: 10px auto;
+}
+
+.seleccionar-button {
+  background-color: #094a8f;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+.seleccionar-button:hover {
+  background-color: #36bd0d;
+}
+
 /* footer */
-
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 150px;
-  }
-  
-  .footer-menu {
-    display: inline-block; 
-    margin: 10px 0;
-  }
-  
-  .footer-menu h3 {
-    display: inline; 
-    margin-right: 20px;
-  }
-  
-  .footer-menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-  }
-  
-  .social-links a img {
-    margin: 0 10px;
-    width: 30px;
-  }
-  
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-menu {
+  margin: 10px 0;
+}
+
+.footer-menu h3 {
+  display: inline;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.footer-menu h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-links {
+  margin: 10px 0;
+}
+
+.social-links a img {
+  width: 30px;
+  margin: 0 10px;
+}
