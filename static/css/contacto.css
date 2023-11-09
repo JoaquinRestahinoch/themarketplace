@@ -1,6 +1,7 @@
 *{
     font-family: 'Hind Madurai', sans-serif;
     font-family: 'Nunito', sans-serif;
+    
   }
   
 
@@ -9,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #004AAD;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
 
 header {
     background-color: #004AAD;
-    color: #fff;
+    color: #004AAD;
     padding: 20px 0;
     border-bottom-left-radius: 6vh;
     border-bottom-right-radius: 6vh;
@@ -60,6 +61,8 @@ header {
     font-size: 18px; 
 
 }
+
+
 
 form {
     background-color: #fff;
