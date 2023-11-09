@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../static/css/iniciar_sesion.css">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../static/css/contacto.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Nunito:wght@300&display=swap');
+</style>
 <body>
     <header>
-        <img src="../static/img/logo2.png" alt="Logo">
+        <nav class="navbar">
+            <div class="container">
+                <a href="home.html" class="logo">
+                    <img src="../static/img/logo2.png" alt="The MarketPlace Logo">
+                </a>
+                <ul class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="iniciar.html">Iniciar sesión</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-
-    <div class="container">
+     <div class="container">
         <form action="https://script.google.com/macros/s/AKfycbyX1h0MQD4xHZo0wr2e0AD4hRAgCCqbhKeTa4I_7l8sUXb57q6Zkvt0bY1ky2chYzAv/exec" method="post">
             <fieldset>
                 <legend>Iniciar Sesión</legend><br>
@@ -41,4 +55,21 @@
         }, 1000);
     }
 </script>
+<footer>
+    <div class="container">
+        <div class="footer-menu">
+            <h3><a href="contacto.html">Contacto</a></h3>
+            <h3>|</h3>
+            <h3><a href="terycond.html">Términos y Condiciones</a></h3>
+            <h3>|</h3>
+            <h3><a href="quienessomos.html">¿Quiénes Somos?</a></h3>
+            <h3>|</h3>
+            <h3><a href="defensaconsum.html">Defensa del Consumidor</a></h3>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/TheMarketPlaceok/"><img src="../static/img/Facebook_Logo.png" alt="Facebook"></a>
+            <a href="https://twitter.com/TheMarketPlaceO"><img src="../static/img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/themarketplace.ok/"><img src="../static/img/instagram.png" alt="Instagram" class="instagram"></a>
+        </div>           
+</footer>
 </html>
