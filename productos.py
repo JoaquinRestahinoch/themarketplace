@@ -38,7 +38,7 @@ productos = [
     {'id': 37, 'name': 'Vestido de verano para mujeres', 'categoria': 'moda', 'price': 80000, 'quantity': 7, 'descripcion': 'Un vestido de verano ligero y colorido para mujeres.', 'foto': '/static/img/prod37.png'},
     {'id': 38, 'name': 'Herramientas de carpintería', 'categoria': 'herramientas', 'price': 70000, 'quantity': 5, 'descripcion': 'Un conjunto de herramientas de carpintería esenciales para tus proyectos de bricolaje.', 'foto': '/static/img/prod38.png'},
     {'id': 39, 'name': 'Zapatillas de moda para hombres', 'categoria': 'indumentaria', 'price': 60000, 'quantity': 8, 'descripcion': 'Zapatillas de moda para hombres que combinan comodidad y estilo.', 'foto': '/static/img/prod39.png'},
-    {'id': 40, 'name': 'Cámara DSLR Canon', 'categoria': 'tecnologia', 'price': 700000, 'quantity': 3, 'descripcion': 'Una cámara DSLR Canon para capturar imágenes de alta calidad.', 'foto': '/static/img/prod40.png'},
+    {'id': 40, 'name': 'Set de herramientas de fontanería', 'categoria': 'herramientas', 'price': 60000, 'quantity': 5, 'descripcion': 'Un set de herramientas de fontanería de alta calidad para reparaciones eficientes.', 'foto': '/static/img/prod40.png'},
     {'id': 41, 'name': 'Reproductor de música Sony', 'categoria': 'tecnologia', 'price': 40000, 'quantity': 10, 'descripcion': 'Un reproductor de música Sony para escuchar tus canciones favoritas.', 'foto': '/static/img/prod41.png'},
     {'id': 42, 'name': 'Heladera de acero inoxidable', 'categoria': 'electrodomesticos', 'price': 800000, 'quantity': 3, 'descripcion': 'Una heladera de acero inoxidable de alta calidad para mantener tus alimentos frescos.', 'foto': '/static/img/prod42.png'},
     {'id': 43, 'name': 'Pantalones deportivos', 'categoria': 'indumentaria', 'price': 50000, 'quantity': 15, 'descripcion': 'Pantalones deportivos cómodos y funcionales para tus actividades físicas.', 'foto': '/static/img/prod43.png'},
@@ -67,6 +67,5 @@ productos = [
     {'id': 66, 'name': 'Robot de cocina KitchenAid', 'categoria': 'electrodomesticos', 'price': 180000, 'quantity': 3, 'descripcion': 'Un robot de cocina KitchenAid para preparar una amplia variedad de platos.', 'foto': '/static/img/prod66.png'},
     {'id': 67, 'name': 'Pelota de tenis Dunlop', 'categoria': 'deportes', 'price': 40000, 'quantity': 8, 'descripcion': 'Una pelota de tenis Dunlop de calidad para tus partidos en la pista.', 'foto': '/static/img/prod67.png'},
     {'id': 68, 'name': 'Bolso de viaje elegante', 'categoria': 'moda', 'price': 120000, 'quantity': 6, 'descripcion': 'Un bolso de viaje elegante y espacioso para tus aventuras.', 'foto': '/static/img/prod68.png'},
-    {'id': 69, 'name': 'Set de herramientas de fontanería', 'categoria': 'herramientas', 'price': 60000, 'quantity': 5, 'descripcion': 'Un set de herramientas de fontanería de alta calidad para reparaciones eficientes.', 'foto': '/static/img/prod69.png'},
     ]
 
